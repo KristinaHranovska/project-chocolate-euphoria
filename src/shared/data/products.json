@@ -1,0 +1,207 @@
+[
+    {
+        "productName": "Apple & Cranberry milk chocolate",
+        "category": "Milk chocolate",
+        "price": "50 UAH",
+        "description": "Dive into the creamy richness of Oat M!lk chocolate blended with the sweet essence of apples and the tangy zest of blackberries. This vegan masterpiece combines sustainability with the luscious flavours of nature, all wrapped in eco-friendly packaging. Perfect for those who cherish the taste of the countryside in every bite. Made with love in York, it is suitable for vegans and vegetarians.",
+        "compound": [
+            "Sustainably grown chocolate",
+            "Palm oil free & all natural ingredients",
+            "Recyclable packaging",
+            "Registered with the Vegan Society",
+            "Proudly made in York, North Yorkshire"
+        ],
+        "photo": "https://res.cloudinary.com/dntbkzhtq/image/upload/v1715618941/appleAndCranberry_sznwsu.webp"
+    },
+    {
+        "productName": "Classic milk chocolate",
+        "category": "Milk chocolate",
+        "price": "45 UAH",
+        "description": "Created to celebrate the Best of British, this isn’t just a simple milk chocolate bar; it is indulgent, creamy, British chocolate that has been handcrafted into a delicious bar of chocolate, just waiting for you to ‘snap’ a piece off, and delight in every bite.",
+        "compound": [
+            "Sustainably grown chocolate",
+            "Palm oil free & all natural ingredients",
+            "Recyclable packaging",
+            "Suitable for Vegetarians",
+            "Proudly made in York, North Yorkshire"
+        ],
+        "photo": "https://res.cloudinary.com/dntbkzhtq/image/upload/v1715618942/clasic_ildyj6.webp"
+    },
+    {
+        "productName": "Classic white chocolate",
+        "category": "White chocolate",
+        "price": "54 UAH",
+        "description": "Deliciously smooth and creamy – our white chocolate is created using a mixture of sugar, cocoa butter and whole milk powder with a touch of natural vanilla flavouring for an extra punch of flavour!",
+        "compound": [
+            "Sustainably grown chocolate",
+            "Palm oil free & all natural ingredients",
+            "Recyclable packaging",
+            "Suitable for Vegetarians",
+            "Proudly made in York, North Yorkshire"
+        ],
+        "photo": "https://res.cloudinary.com/dntbkzhtq/image/upload/v1715618941/clasicWhite_ptvukl.webp"
+    },
+    {
+        "productName": "Honey milk chocolate",
+        "category": "Milk chocolate",
+        "price": "50 UAH",
+        "description": "Sweetened to perfection, this combination of honey and chocolate is a sure thing for chocolate lovers. With the distinct flavour of honey running through our 45% cocoa solids milk chocolate, you are bound to be taken to a place of sheer heaven.",
+        "compound": [
+            " Sustainably grown chocolate",
+            "Palm oil free & all natural ingredients",
+            "Recyclable packaging",
+            "Proudly made in York, North Yorkshire",
+            "Suitable for Vegetarians"
+        ],
+        "photo": "https://res.cloudinary.com/dntbkzhtq/image/upload/v1715618942/honey_gepnn1.webp"
+    },
+    {
+        "productName": "Lime & Sea Salt dark chocolate",
+        "category": "Dark chocolate",
+        "price": "66 UAH",
+        "description": "Sea salt and chocolate is a unique combination that has completely taken over the chocolate industry; cool, crisp, and lively, this perfect fusion of flavour will awaken your senses like a fresh sea breeze.",
+        "compound": [
+            "Sustainably grown chocolate",
+            "Palm oil free & all natural ingredients",
+            "Recyclable packaging",
+            "Proudly made in York, North Yorkshire",
+            "Registered with The Vegan Society"
+        ],
+        "photo": "https://res.cloudinary.com/dntbkzhtq/image/upload/v1715618947/limeAmdSalt_bgpquq.webp"
+    },
+    {
+        "productName": "Orange dark chocolate",
+        "category": "Dark chocolate",
+        "price": "45 UAH",
+        "description": "Unwrap a bar of our Orange Blossom Dark Chocolate to discover a sophisticated harmony of flavours. The delicate, floral notes of orange blossom are perfectly balanced with the deep, intense richness of dark chocolate, creating an exquisite taste experience. A luxurious treat from York, ideal for those who seek a refined, aromatic indulgence",
+        "compound": [
+            "Sustainably grown chocolate",
+            "Palm oil free & all natural ingredients",
+            "Recyclable packaging",
+            "Proudly made in York, North Yorkshire",
+            "Registered with The Vegan Society"
+        ],
+        "photo": "https://res.cloudinary.com/dntbkzhtq/image/upload/v1715618948/orange_xswkx1.webp"
+    },
+    {
+        "productName": "Pinapple dark chocolate",
+        "category": "Dark chocolate",
+        "price": "54 UAH",
+        "description": "This dark chocolate bar brings to mind flavours of passion fruit and pineapples, with a delicate hint of coconut, transporting your imagination to the Caribbean with its bright blue skies, pina coladas and hot summer sunshine…hmmmm.",
+        "compound": [
+            "Sustainably grown chocolate",
+            "Palm oil free & all natural ingredients",
+            "Recyclable packaging",
+            "Proudly made in York, North Yorkshire",
+            "Registered with The Vegan Society"
+        ],
+        "photo": "https://res.cloudinary.com/dntbkzhtq/image/upload/v1715618948/pinapple_rhhoi4.webp"
+    },
+    {
+        "productName": "Winter fruits dark chocolate",
+        "category": "Dark chocolate",
+        "price": "66 UAH",
+        "description": "Indulge in the vibrant, tropical fusion of passion fruit and coconut, enrobed in velvety dark chocolate. Our Passion Fruit and Coconut Dark Chocolate Bar is a taste of paradise, blending the tartness of passion fruit with the creamy sweetness of coconut for a truly exotic experience. Crafted with care in York from sustainably sourced cocoa and natural ingredients, this bar is an eco-conscious choice for those who crave a luxurious, fruity escape.",
+        "compound": [
+            "Sustainably grown chocolate",
+            "Palm oil free & all natural ingredients",
+            "Recyclable packaging",
+            "Proudly made in York, North Yorkshire",
+            "Registered with The Vegan Society"
+        ],
+        "photo": "https://res.cloudinary.com/dntbkzhtq/image/upload/v1715618952/winterFruits_n8iffq.webp"
+    },
+    {
+        "productName": "Small chocolate box",
+        "category": "Gift box",
+        "price": "190 UAH",
+        "description": "Are you in need of a selection of delicious, flavour infused chocolate? Then look no further than our letterbox friendly 3 bar chocolate box –  a selection of three delicious, ethically produced chocolate bars! Simply  choose which chocolate bars you’d like and if you’d like to send this as a gift, add the address where the chocolate should be sent in the checkout and optionally include a gift message in the first box. With a great choice of flavours, you can make it the perfect gift, or you can fill it with just your very own favourites, and explore a whole new world of flavour!",
+        "compound": [
+            "Sustainably grown chocolate",
+            "Palm oil free & all natural ingredients",
+            "Recyclable packaging",
+            "Proudly made in York, North Yorkshire",
+            "Registered with The Vegan Society"
+        ],
+        "photo": "https://res.cloudinary.com/dntbkzhtq/image/upload/v1715618941/barSmallThreeChocolate_v4mhe9.webp"
+    },
+    {
+        "productName": "Classic collection chocolate",
+        "category": "190 UAH",
+        "price": "Gift box",
+        "description": "Simple, classic and utterly delicious, you can enjoy our exquisite Colombian chocolate delivered through your door. Our chocolate is made from sustainably grown, palm oil free chocolate, crafted and packed by hand at our choccy HQ, based in the beautiful City of York – we  use plastics free packaging to ensure it arrives with you or a loved one in excellent condition, and all the packaging can be recycled within your local facilities.",
+        "compound": [
+            "Sustainably grown chocolate",
+            "Palm oil free & all natural ingredients",
+            "Recyclable packaging",
+            "Proudly made in York, North Yorkshire",
+            "Registered with The Vegan Society"
+        ],
+        "photo": "https://res.cloudinary.com/dntbkzhtq/image/upload/v1715618941/barSmallThree_opbqfy.webp"
+    },
+    {
+        "productName": "Gin Collection Letterbox Gift",
+        "category": "Gift box",
+        "price": "250 UAH",
+        "description": "We know sometimes you simply want them all, so we’ve popped them all into a single box for you, perfect for sending to a loved one or a friend – or quite simply to treat yourself. Enjoy all 4 of our gin flavour chocolates in this collection and remember all of our postal packaging is recyclable, so just put it all in your home recycling box once finished.",
+        "compound": [
+            "Sustainably grown chocolate",
+            "Palm oil free & all natural ingredients",
+            "Recyclable packaging",
+            "Proudly made in York, North Yorkshire",
+            "Registered with The Vegan Society"
+        ],
+        "photo": "https://res.cloudinary.com/dntbkzhtq/image/upload/v1715618941/barMedium_sghbrp.webp"
+    },
+    {
+        "productName": "Super Your Own Chocolate Gift Hamper",
+        "category": "Gift box",
+        "price": "340 UAH",
+        "description": "Our Choose your own Chocolate Gift Hamper is the perfect way to create a gift for that special someone. Choosing the flavours you know they will love will go along way to show you care. Great for every occasion, this is the ultimate way to explore our flavours.",
+        "compound": [
+            "1 x 200g Hot Chocolate",
+            "4 x 90g Chocolate Bars",
+            "1 x 30g Greetings Message Milk Chocolate Bar",
+            "Sustainably grown chocolate",
+            "Palm oil free & all natural ingredients",
+            "Recyclable packaging",
+            "Proudly made in York, North Yorkshire",
+            "Registered with The Vegan Society"
+        ],
+        "photo": "https://res.cloudinary.com/dntbkzhtq/image/upload/v1715618947/mediumBox_g3wzmk.webp"
+    },
+    {
+        "productName": "Chocolate Gift Hamper",
+        "category": "Gift box",
+        "price": "290 UAH",
+        "description": "Our Choose your own Gift Hamper is the perfect way to create a gift for that special someone. Choosing the flavours you know they will love will go along way to show you care. Great for every occasion, this is the ultimate way to explore our flavours.",
+        "compound": [
+            "1 x 200g Hot Chocolate",
+            "2 x 90g Chocolate Bars",
+            "1 x 30g Greetings Message Milk Chocolate Bar",
+            "Sustainably grown chocolate",
+            "Palm oil free & all natural ingredients",
+            "Recyclable packaging",
+            "Proudly made in York, North Yorkshire",
+            "Registered with The Vegan Society"
+        ],
+        "photo": "https://res.cloudinary.com/dntbkzhtq/image/upload/v1715618952/smallBox_t9rjrx.webp"
+    },
+    {
+        "productName": "Mega Chocolate Gift Hamper",
+        "category": "Gift box",
+        "price": "420 UAH",
+        "description": "Our Choose your own Gift Hamper is the perfect way to create a gift for that special someone. Choosing the flavours you know they will love will go along way to show you care. Great for every occasion, this is the ultimate way to explore our flavours.",
+        "compound": [
+            "1 x 200g Hot Chocolate",
+            "6 x 90g Chocolate Bars",
+            "1 x 30g Greetings Milk Chocolate Bar",
+            "Sustainably grown chocolate",
+            "Palm oil free & all natural ingredients",
+            "Recyclable packaging",
+            "Proudly made in York, North Yorkshire",
+            "Registered with The Vegan Society"
+        ],
+        "photo": "https://res.cloudinary.com/dntbkzhtq/image/upload/v1715622664/superBox_wszlws.webp"
+    }
+]

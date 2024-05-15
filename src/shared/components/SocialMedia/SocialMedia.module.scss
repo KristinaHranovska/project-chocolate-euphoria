@@ -1,0 +1,14 @@
+.socialIcon {
+    width: 22px;
+    height: 22px;
+    stroke: $primary-white-color;
+
+    &:active {
+        stroke: $primary-main-color;
+    }
+
+    @include media(tablet) {
+        width: 24px;
+        height: 24px;
+    }
+}

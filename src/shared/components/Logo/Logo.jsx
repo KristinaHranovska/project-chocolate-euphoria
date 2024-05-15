@@ -1,10 +1,17 @@
-import clsx from 'clsx';
-import s from './Logo.module.scss';
+import style from './Logo.module.scss';
 
-const Logo = ({ className }) => {
+import { icons as sprite } from 'shared/icons';
+
+const Logo = () => {
   return (
-    <a className={clsx(s.logo, className && className)} href="#">
-      Company Logo
+    <a href="/" className={style.logo}>
+      <svg className={style.iconLogo} role="img">
+        <use xlinkHref={`${sprite}#logo`} />
+      </svg>
+      <span>
+        Chocolate <br />
+        <span className={style.accentLogo}>Euphoria</span>
+      </span>
     </a>
   );
 };

@@ -1,0 +1,21 @@
+.iconThumb {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.basketCartIcon {
+    width: 24px;
+    height: 24px;
+    stroke: $primary-white-color;
+    transition: stroke 300ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:active {
+        stroke: $primary-main-color;
+    }
+
+    @include media(desktop) {
+        width: 35px;
+        height: 35px;
+    }
+}

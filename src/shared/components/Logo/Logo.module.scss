@@ -1,4 +1,31 @@
 .logo {
-  text-decoration: none;
-  color: inherit;
+  font-family: $logo-font-family;
+  font-style: italic;
+  font-weight: 700;
+  text-align: center;
+  @include font(14, 18);
+  letter-spacing: -0.03em;
+  color: $primary-white-color;
+
+  display: flex;
+  align-items: center;
+
+  @include media(desktop) {
+    @include font(20, 20);
+  }
+}
+
+.accentLogo {
+  font-style: normal;
+  color: $primary-main-color;
+}
+
+.iconLogo {
+  width: 35px;
+  height: 35px;
+
+  @include media(desktop) {
+    width: 45px;
+    height: 45px;
+  }
 }

@@ -19,13 +19,3 @@
   font-style: normal;
   color: $primary-main-color;
 }
-
-.iconLogo {
-  width: 35px;
-  height: 35px;
-
-  @include media(desktop) {
-    width: 45px;
-    height: 45px;
-  }
-}

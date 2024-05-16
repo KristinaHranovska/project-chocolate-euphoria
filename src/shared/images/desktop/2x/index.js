@@ -12,7 +12,7 @@ import heroSlideTwo2x from './heroSlideTwo2x.webp'
 import line2x from './line2x.webp'
 import lineDown2x from './lineDown2x.webp'
 import lineUp2x from './lineUp2x.webp'
-import shef2x from './shef2x.webp'
+import sheff2x from './sheff2x.webp'
 import smallFour2x from './smallFour2x.webp'
 import smallOne2x from './smallOne2x.webp'
 import smallThree2x from './smallThree2x.webp'
@@ -34,7 +34,7 @@ const imagesDesktop2x = {
     line2x,
     lineDown2x,
     lineUp2x,
-    shef2x,
+    sheff2x,
     smallFour2x,
     smallOne2x,
     smallThree2x,

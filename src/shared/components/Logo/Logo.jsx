@@ -1,13 +1,10 @@
+import { logo } from 'shared/images';
 import style from './Logo.module.scss';
-
-import { icons as sprite } from 'shared/icons';
 
 const Logo = () => {
   return (
     <a href="/" className={style.logo}>
-      <svg className={style.iconLogo} role="img">
-        <use xlinkHref={`${sprite}#logo`} />
-      </svg>
+      <img src={logo.logoOne} alt="logo" width="65" height="65" />
       <span>
         Chocolate <br />
         <span className={style.accentLogo}>Euphoria</span>

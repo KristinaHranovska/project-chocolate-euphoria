@@ -5,21 +5,28 @@ import { useMediaQuery } from 'react-responsive';
 import { icons as sprite } from 'shared/icons';
 import style from './HeaderNav.module.scss';
 import NavList from '../NavList/NavList';
-import { SocialMedia } from 'shared/components';
+import { Logo, SocialMedia } from 'shared/components';
 
 const HeaderNav = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const overlayMenuRef = useRef(null);
-  const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1224px)' });
+  const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1439px)' });
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
     document.body.style.overflow = isMenuOpen ? 'unset' : 'hidden';
   };
 
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+    document.body.style.overflow = 'unset';
+  };
+
   return (
     <>
-      <NavList className={style.navList} />
+      <NavList className={style.navList}>
+        <Logo className={style.logo} />
+      </NavList>
 
       {isTabletOrMobile && (
         <>
@@ -52,7 +59,10 @@ const HeaderNav = () => {
                     </svg>
                   </button>
 
-                  <NavList className={style.navMenuMobile} />
+                  <NavList
+                    className={style.navMenuMobile}
+                    closeMenu={closeMenu}
+                  />
                   <SocialMedia className={style.iconMobile} />
                 </div>
               </div>

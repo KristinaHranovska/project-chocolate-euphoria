@@ -5,6 +5,7 @@
     @include font(14, 16);
     transition: color $animation;
     position: relative;
+    cursor: pointer;
 
     &:hover,
     :active {
@@ -25,7 +26,16 @@
     &:hover::after,
     :active::after {
         color: $primary-main-color;
-        width: 50%;
+        width: 100%;
+    }
+
+    &.activeLink {
+        color: $primary-main-color;
+
+        &::after {
+            color: $primary-main-color;
+            width: 100%;
+        }
     }
 
     @include media(desktop) {

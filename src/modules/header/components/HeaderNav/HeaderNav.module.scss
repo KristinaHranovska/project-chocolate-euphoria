@@ -19,13 +19,13 @@
   }
 }
 
-
 .navList {
   display: none;
 
   @include media(desktop) {
     display: flex;
-    gap: 24px;
+    align-items: center;
+    gap: 40px;
   }
 }
 

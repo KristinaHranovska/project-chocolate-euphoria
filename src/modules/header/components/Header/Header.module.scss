@@ -1,7 +1,9 @@
 .header {
-  position: sticky;
+  position: fixed;
   z-index: 2;
   top: 0;
+
+  width: 100%;
 
   display: flex;
   align-items: center;
@@ -10,6 +12,4 @@
   padding-block: 10px;
   padding-inline: 20px;
   max-width: unset;
-
-  background-color: black;
 }

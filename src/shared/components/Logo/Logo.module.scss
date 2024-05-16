@@ -15,6 +15,16 @@
   }
 }
 
+.logoImg {
+  width: 50px;
+  height: 50px;
+
+  @include media(desktop) {
+    width: 65px;
+    height: 65px;
+  }
+}
+
 .accentLogo {
   font-style: normal;
   color: $primary-main-color;

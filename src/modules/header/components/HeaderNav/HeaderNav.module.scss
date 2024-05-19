@@ -107,3 +107,13 @@
   display: flex;
   gap: 18px;
 }
+
+.headerContainer {
+  @include media(desktop) {
+    border: 1px solid $primary-text-white-color;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+
+    padding: 0 30px;
+  }
+}

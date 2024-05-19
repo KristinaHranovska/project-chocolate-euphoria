@@ -1,0 +1,72 @@
+.visuallyHidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.benefitsList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    @include media(tablet) {
+        justify-content: center;
+        gap: 32px;
+    }
+}
+
+.benefitsItem {
+    width: 330px;
+}
+
+.benefitsSection {
+    padding-top: 75px;
+    padding-bottom: 64px;
+}
+
+.benefitsThumb {
+    background-color: $dark-bg-color;
+    padding: 65px 0;
+}
+
+.thumbBenefits {
+    width: 62px;
+    height: 62px;
+
+    display: flex;
+    align-items: center;
+
+    border: 1px solid $primary-border-icon-color;
+    border-radius: 365px;
+
+    padding: 15px;
+    margin-bottom: 22px;
+}
+
+.benefitsIcons {
+    width: 32px;
+    height: 32px;
+}
+
+.benefitsTitle {
+    @include font(18, 22);
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    color: $primary-white-color;
+
+    margin-bottom: 18px;
+}
+
+.benefitsDescription {
+    @include font(14, 18);
+    color: $primary-text-white-color;
+    letter-spacing: -0.02em;
+}

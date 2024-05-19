@@ -1,4 +1,5 @@
-import { useState, useRef } from 'react';
+import clsx from 'clsx';
+import { useState, useRef, useEffect } from 'react';
 import { CSSTransition } from 'react-transition-group';
 import { useMediaQuery } from 'react-responsive';
 
@@ -9,6 +10,7 @@ import { Logo, SocialMedia } from 'shared/components';
 
 const HeaderNav = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [scroll, setScroll] = useState(false);
   const overlayMenuRef = useRef(null);
   const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1439px)' });
 
@@ -22,11 +24,29 @@ const HeaderNav = () => {
     document.body.style.overflow = 'unset';
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setScroll(true);
+      } else {
+        setScroll(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
     <>
-      <NavList className={style.navList}>
-        <Logo className={style.logo} />
-      </NavList>
+      <div className={clsx({ [style.headerContainer]: scroll })}>
+        <NavList className={style.navList}>
+          <Logo className={style.logo} />
+        </NavList>
+      </div>
 
       {isTabletOrMobile && (
         <>

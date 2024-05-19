@@ -5,14 +5,18 @@ const SocialMedia = ({ className }) => {
   return (
     <div className={className}>
       <div>
-        <svg className={style.socialIcon}>
-          <use xlinkHref={`${sprite}#instagram`} />
-        </svg>
+        <a href="https://www.instagram.com/" target="_blank">
+          <svg className={style.socialIcon}>
+            <use xlinkHref={`${sprite}#instagram`} />
+          </svg>
+        </a>
       </div>
       <div>
-        <svg className={style.socialIcon}>
-          <use xlinkHref={`${sprite}#twitter`} />
-        </svg>
+        <a href="https://x.com/" target="_blank">
+          <svg className={style.socialIcon}>
+            <use xlinkHref={`${sprite}#twitter`} />
+          </svg>
+        </a>
       </div>
     </div>
   );

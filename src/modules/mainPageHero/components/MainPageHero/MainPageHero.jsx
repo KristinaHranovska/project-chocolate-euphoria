@@ -1,4 +1,3 @@
-import HeroComponent from '../HeroComponent/HeroComponent';
 import HeroInfom from '../HeroInfom/HeroInfom';
 import HeroSlide from '../HeroSlide/HeroSlide';
 
@@ -8,7 +7,6 @@ const MainPageAbout = () => {
   return (
     <section className={style.heroSection}>
       <HeroSlide />
-      <HeroComponent />
       <HeroInfom />
     </section>
   );

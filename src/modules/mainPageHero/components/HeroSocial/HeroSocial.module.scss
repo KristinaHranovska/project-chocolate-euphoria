@@ -1,0 +1,20 @@
+.heroLineAndSocial {
+    display: flex;
+    flex-direction: column;
+}
+
+.heroLine {
+    height: 100px;
+    width: 3px;
+    background-color: $primary-darkgrey-color;
+    margin-bottom: 32px;
+    margin-left: 11px;
+}
+
+.heroSocialLink {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 18px;
+
+    margin-bottom: 86px;
+}

@@ -6,6 +6,10 @@
 
   @include font(14, 14);
 
+  @include media(tablet) {
+    padding: 14px 40px;
+  }
+
   &.border {
     border: 1px solid $primary-white-color;
     border-radius: 100px;

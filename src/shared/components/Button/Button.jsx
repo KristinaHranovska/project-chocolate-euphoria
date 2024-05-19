@@ -3,6 +3,7 @@ import s from './Button.module.scss';
 
 const Button = ({
   type = 'button',
+  children,
   title,
   className,
   border,
@@ -16,7 +17,7 @@ const Button = ({
       className={clsx(s.button, className && className, border && s.border)}
       {...rest}
     >
-      {title}
+      {title ? title : children}
     </button>
   );
 };

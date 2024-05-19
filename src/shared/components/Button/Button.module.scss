@@ -1,16 +1,23 @@
 .button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
+  color: $primary-white-color;
+  font-weight: 600;
 
-  @include font(16, 24);
+  padding: 12px 28px;
+
+  @include font(14, 14);
 
   &.border {
-    border: 1px solid #1f1f1f1a;
-    border-radius: 200px;
+    border: 1px solid $primary-white-color;
+    border-radius: 100px;
+    transition: border $animation, color $animation;
+
+    &:hover {
+      border-color: $primary-main-color;
+      color: $primary-main-color;
+    }
   }
 }
+
 .button:disabled {
   cursor: not-allowed;
 }

@@ -1,0 +1,66 @@
+.heroInform {
+    position: relative;
+    top: 100px;
+}
+
+.heroBtn {
+    display: flex;
+    gap: 14px;
+}
+
+.btnOrangeStyle {
+    background-color: $primary-main-color;
+    border-radius: 100px;
+    transition: background-color $animation, color $animation;
+
+    &:hover {
+        color: $primary-main-color;
+        background-color: $primary-hover-color;
+    }
+}
+
+.btnArrowDown {
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    background-color: $primary-white-color;
+    padding: 6px;
+    transition: background-color $animation;
+    animation: bounce 2s infinite reverse;
+
+    .iconHeroArrow {
+        fill: $primary-main-color;
+        transition: fill $animation;
+
+        &:hover {
+            fill: $primary-white-color;
+        }
+    }
+
+    &:hover {
+        background-color: $primary-main-color;
+    }
+}
+
+.scrollStyle {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(5px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}

@@ -57,6 +57,24 @@
 
     @include media(desktop) {
         gap: 75px;
+
+        &::after,
+        &::before {
+            position: absolute;
+            content: "";
+            top: 45%;
+            width: 1px;
+            height: 124px;
+            background-color: $primary-border-icon-color;
+        }
+
+        &::before {
+            left: 36%;
+        }
+
+        &::after {
+            right: 37%;
+        }
     }
 }
 

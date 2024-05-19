@@ -4,12 +4,23 @@
   top: 0;
 
   width: 100%;
+  max-width: unset;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  padding-block: 10px;
-  padding-inline: 20px;
-  max-width: unset;
+  margin-top: 5px;
+  padding: 10px 20px;
+
+  @include media(desktop) {
+    padding-top: 10px;
+    margin-top: 0;
+  }
+}
+
+.headerContainer {
+  border: 1px solid $primary-text-white-color;
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
 }

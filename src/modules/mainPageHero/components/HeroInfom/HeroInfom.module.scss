@@ -50,7 +50,8 @@
     border-radius: 100px;
     transition: background-color $animation, color $animation;
 
-    &:hover {
+    &:hover,
+    &:active {
         color: $primary-main-color;
         background-color: $primary-hover-color;
     }

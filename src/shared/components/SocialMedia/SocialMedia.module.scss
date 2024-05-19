@@ -3,8 +3,10 @@
     height: 22px;
     stroke: $primary-white-color;
     fill: transparent;
+    transition: stroke $animation;
 
-    &:active {
+    &:active,
+    &:hover {
         stroke: $primary-main-color;
     }
 

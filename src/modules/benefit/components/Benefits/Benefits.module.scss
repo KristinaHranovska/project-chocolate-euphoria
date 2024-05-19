@@ -12,6 +12,39 @@
     overflow: hidden;
 }
 
+.benefitsSection {
+    position: relative;
+    overflow: hidden;
+    padding-top: 75px;
+    padding-bottom: 64px;
+}
+
+.benefitsImgUp {
+    @include media(tablet) {
+        width: 100%;
+        position: absolute;
+        top: 75px;
+    }
+
+    @include media(desktop) {
+        width: 740px;
+        left: 0;
+    }
+}
+
+.benefitsImgDown {
+    @include media(tablet) {
+        width: 100%;
+        position: absolute;
+        bottom: 65px;
+    }
+
+    @include media(desktop) {
+        width: 740px;
+        right: 0px;
+    }
+}
+
 .benefitsList {
     display: flex;
     flex-wrap: wrap;
@@ -21,15 +54,14 @@
         justify-content: center;
         gap: 32px;
     }
+
+    @include media(desktop) {
+        gap: 75px;
+    }
 }
 
 .benefitsItem {
-    width: 330px;
-}
-
-.benefitsSection {
-    padding-top: 75px;
-    padding-bottom: 64px;
+    width: 340px;
 }
 
 .benefitsThumb {

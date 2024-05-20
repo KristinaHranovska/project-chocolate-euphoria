@@ -1,13 +1,10 @@
 import clsx from 'clsx';
 import s from './MainTitle.module.scss';
 
-const MainTitle = ({ title, className, ...props }) => {
+const MainTitle = ({ children, className, ...props }) => {
   return (
-    <h2
-      className={clsx(s.title, className && className)}
-      {...props}
-    >
-      {title}
+    <h2 className={clsx(s.title, className && className)} {...props}>
+      {children}
     </h2>
   );
 };

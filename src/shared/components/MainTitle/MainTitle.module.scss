@@ -1,19 +1,15 @@
 .title {
-  font-weight: 900;
-  font-size: 36px;
-  line-height: 44px;
+  @include font(20, 24);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  text-align: center;
+  color: $primary-text-color;
 
-  &.light {
-    color: $primary-text-color;
-  }
+  margin: 0 auto;
 
   @include media(tablet) {
-    font-size: 48px;
-    line-height: 56px;
-  }
-
-  @include media(desktop) {
-    font-size: 56px;
-    line-height: 64px;
+    @include font(24, 28);
+    width: 411px;
   }
 }

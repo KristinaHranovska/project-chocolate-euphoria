@@ -1,6 +1,6 @@
 .header {
   position: fixed;
-  z-index: 2;
+  z-index: 10;
   top: 0;
 
   width: 100%;
@@ -22,5 +22,5 @@
 .headerContainer {
   border: 1px solid $primary-text-white-color;
   border-radius: 12px;
-  backdrop-filter: blur(10px);
+  background-color: $primary-header-color;
 }

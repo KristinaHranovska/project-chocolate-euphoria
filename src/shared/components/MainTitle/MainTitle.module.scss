@@ -9,7 +9,7 @@
   margin: 0 auto;
 
   @include media(tablet) {
-    @include font(24, 28);
-    width: 411px;
+    @include font(30, 38);
+    width: 500px;
   }
 }

@@ -3,9 +3,15 @@
     flex-direction: column;
     gap: 35px;
 
+
     @include media(tablet) {
         flex-direction: row;
         gap: 10px;
+    }
+
+    @include media(desktop) {
+        justify-content: center;
+        gap: 35px;
     }
 }
 
@@ -35,6 +41,10 @@
     @include media(tablet) {
         left: 13px;
     }
+
+    @include media(desktop) {
+        left: 34px;
+    }
 }
 
 .imgBlock {
@@ -43,12 +53,21 @@
     background-color: $primary-main-arrow-color;
     box-shadow: $primary-shadow-color;
     border-radius: 200px;
+
+    @include media(desktop) {
+        width: 300px;
+        height: 300px;
+    }
 }
 
 .imgTaste {
     width: 200px;
     position: absolute;
     bottom: 12px;
+
+    @include media(desktop) {
+        width: 300px;
+    }
 }
 
 .tasteBlock {
@@ -63,6 +82,14 @@
         width: 222px;
         padding: 115px 25px 30px;
         margin-top: 120px;
+    }
+
+    @include media(desktop) {
+        width: 370px;
+        height: 475px;
+
+        padding: 160px 25px 50px;
+        margin-top: 180px;
     }
 
     &.even {
@@ -97,6 +124,10 @@
         @include font(17, 22);
         margin-bottom: 20px;
     }
+
+    @include media(desktop) {
+        @include font(25, 32);
+    }
 }
 
 .thumbIconDote {
@@ -113,6 +144,10 @@
     @include media(tablet) {
         left: 98px;
     }
+
+    @include media(desktop) {
+        left: 160px;
+    }
 }
 
 .doteIcon {
@@ -125,11 +160,16 @@
     @include media(tablet) {
         margin-bottom: 20px;
     }
+
+    @include media(desktop) {
+        width: 30px;
+        height: 30px;
+    }
 }
 
 .arrowIcon {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     cursor: pointer;
     stroke: $primary-text-color;
     fill: transparent;
@@ -162,11 +202,15 @@
     @include media(tablet) {
         @include font(12, 20);
     }
+
+    @include media(desktop) {
+        @include font(15, 22);
+    }
 }
 
 .overlay {
     position: absolute;
-    top: 120px;
+    top: 145px;
     left: 0;
     width: 100%;
     height: 400px;
@@ -180,6 +224,17 @@
     &.activeOverlay {
         transform: translateX(0);
     }
+
+    @include media(tablet) {
+        top: 120px;
+        padding: 105px 15px 0;
+    }
+
+    @include media(desktop) {
+        top: 180px;
+        height: 475px;
+        padding: 180px 25px 50px;
+    }
 }
 
 .resetMargin {
@@ -187,11 +242,10 @@
 }
 
 .arrowIconLeft {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     stroke: $primary-text-color;
     fill: transparent;
-    transform: rotate(180deg);
     animation: moveArrow 1s infinite alternate;
 
     &:active {

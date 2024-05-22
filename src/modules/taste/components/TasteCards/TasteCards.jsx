@@ -43,7 +43,6 @@ const TasteCards = () => {
             <div
               className={`${style.overlay} ${activeIndex === index ? style.activeOverlay : ''}`}
             >
-              <h3 className={style.tasteTitle}>{taste.title}</h3>
               <p className={`${style.textTaste} ${style.resetMargin}`}>
                 {taste.description}
               </p>

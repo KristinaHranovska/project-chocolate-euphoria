@@ -2,6 +2,11 @@
     display: flex;
     flex-direction: column;
     gap: 35px;
+
+    @include media(tablet) {
+        flex-direction: row;
+        gap: 10px;
+    }
 }
 
 .tasteItem {
@@ -26,6 +31,10 @@
     z-index: 3;
     top: 15px;
     left: 70px;
+
+    @include media(tablet) {
+        left: 13px;
+    }
 }
 
 .imgBlock {
@@ -49,6 +58,12 @@
     overflow: hidden;
     padding: 90px 55px 30px;
     margin-top: 145px;
+
+    @include media(tablet) {
+        width: 222px;
+        padding: 115px 25px 30px;
+        margin-top: 120px;
+    }
 
     &.even {
 
@@ -77,6 +92,11 @@
     text-align: center;
 
     margin-bottom: 10px;
+
+    @include media(tablet) {
+        @include font(17, 22);
+        margin-bottom: 20px;
+    }
 }
 
 .thumbIconDote {
@@ -88,6 +108,11 @@
     position: absolute;
     bottom: 15px;
     left: 150px;
+
+
+    @include media(tablet) {
+        left: 98px;
+    }
 }
 
 .doteIcon {
@@ -95,6 +120,11 @@
     height: 25px;
     fill: $primary-white-color;
     margin-bottom: 10px;
+
+
+    @include media(tablet) {
+        margin-bottom: 20px;
+    }
 }
 
 .arrowIcon {
@@ -128,17 +158,21 @@
     letter-spacing: 0.04em;
     text-align: center;
     margin-bottom: 33px;
+
+    @include media(tablet) {
+        @include font(12, 20);
+    }
 }
 
 .overlay {
     position: absolute;
-    top: 145px;
+    top: 120px;
     left: 0;
     width: 100%;
     height: 400px;
     border-radius: 24px;
     background-color: $primary-hover-color;
-    padding: 90px 40px 0;
+    padding: 80px 15px 0;
 
     transform: translateX(-100%);
     transition: transform $animation;

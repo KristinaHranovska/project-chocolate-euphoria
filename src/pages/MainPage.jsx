@@ -1,4 +1,5 @@
 import { Benefits } from 'modules/benefit';
+import { HowItsMade } from 'modules/howItsName';
 import { MainPageHero } from 'modules/mainPageHero';
 import { Taste } from 'modules/taste';
 
@@ -8,6 +9,7 @@ const MainPage = () => {
       <MainPageHero />
       <Benefits />
       <Taste />
+      <HowItsMade />
     </main>
   );
 };

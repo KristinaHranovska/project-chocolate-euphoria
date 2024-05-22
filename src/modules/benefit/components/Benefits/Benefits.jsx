@@ -5,11 +5,12 @@ import { Container } from 'shared/components';
 import style from './Benefits.module.scss';
 import { icons as sprite } from 'shared/icons';
 import { imagesDesktop2x } from 'shared/images';
+import SectionMain from 'shared/components/SectionMain/SectionMain';
 
 const Benefits = () => {
   const isTabletOrDesktop = useMediaQuery({ query: '(min-width: 768px)' });
   return (
-    <section className={style.benefitsSection}>
+    <SectionMain className={style.benefitsSection}>
       <h2 className={style.visuallyHidden}>Benefits</h2>
       <div className={style.benefitsThumb}>
         {isTabletOrDesktop && (
@@ -44,7 +45,7 @@ const Benefits = () => {
           />
         )}
       </div>
-    </section>
+    </SectionMain>
   );
 };
 

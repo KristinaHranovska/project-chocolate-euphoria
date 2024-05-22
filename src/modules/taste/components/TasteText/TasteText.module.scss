@@ -10,17 +10,6 @@
     color: $primary-main-color;
 }
 
-.titleDescription {
-    @include font(14, 18);
-    text-align: center;
-    letter-spacing: -0.02em;
-
-    margin: 0 auto;
-    margin-bottom: 50px;
-
-    @include media(tablet) {
-        @include font(16, 18);
-        width: 486px;
-        margin-bottom: 30px;
-    }
+.colorText {
+    color: $primary-text-color;
 }

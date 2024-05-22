@@ -7,3 +7,4 @@ export { default as SharedLayout } from './SharedLayout/SharedLayout';
 export { default as BasketButton } from './BasketButton/BasketButton';
 export { default as SocialMedia } from './SocialMedia/SocialMedia';
 export { default as ArrowUp } from './ArrowUp/ArrowUp';
+export { default as MainText } from './MainText/MainText';

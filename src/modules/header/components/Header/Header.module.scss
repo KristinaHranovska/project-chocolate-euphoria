@@ -13,14 +13,8 @@
   margin-top: 5px;
   padding: 0 20px;
 
-  @include media(desktop) {
+  @include media(tablet) {
     padding-top: 10px;
     margin-top: 0;
   }
-}
-
-.headerContainer {
-  border: 1px solid $primary-text-white-color;
-  border-radius: 12px;
-  background-color: $primary-header-color;
 }

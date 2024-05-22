@@ -12,7 +12,7 @@ const HeaderNav = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scroll, setScroll] = useState(false);
   const overlayMenuRef = useRef(null);
-  const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1439px)' });
+  const isMobile = useMediaQuery({ query: '(max-width: 375px)' });
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -48,7 +48,7 @@ const HeaderNav = () => {
         </NavList>
       </div>
 
-      {isTabletOrMobile && (
+      {isMobile && (
         <>
           <div className={style.thumbMenu} onClick={toggleMenu}>
             <svg className={style.mobileMenu}>

@@ -19,6 +19,11 @@
   width: 50px;
   height: 50px;
 
+  @include media(tablet) {
+    width: 60px;
+    height: 60px;
+  }
+
   @include media(desktop) {
     width: 65px;
     height: 65px;

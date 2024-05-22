@@ -22,9 +22,13 @@
 .navList {
   display: none;
 
-  @include media(desktop) {
+  @include media(tablet) {
     display: flex;
     align-items: center;
+    gap: 20px;
+  }
+
+  @include media(desktop) {
     gap: 40px;
   }
 }
@@ -53,21 +57,12 @@
   &.entered {
     right: 0;
   }
-
-  @include media(tablet) {
-    width: 290px;
-  }
 }
 
 .closeButton {
   position: absolute;
   top: 20px;
   right: 20px;
-
-  @include media(tablet) {
-    top: 24px;
-    right: 32px;
-  }
 }
 
 .closeMenu {
@@ -91,11 +86,6 @@
   z-index: 3;
 
   @include media(tablet) {
-    top: 156px;
-    right: 81px;
-  }
-
-  @include media(desktop) {
     display: none;
   }
 }
@@ -109,11 +99,15 @@
 }
 
 .headerContainer {
-  @include media(desktop) {
+  @include media(tablet) {
     border: 1px solid $primary-text-white-color;
     border-radius: 12px;
-    background-color: $primary-header-color;
+    backdrop-filter: blur(10px);
 
+    padding: 0 10px;
+  }
+
+  @include media(desktop) {
     padding: 0 30px;
   }
 }

@@ -6,7 +6,7 @@ import style from './NavList.module.scss';
 import { scrollToElementById } from 'helpers/scrollToElementById';
 
 const NavList = ({ className, children, closeMenu }) => {
-  const isDesctop = useMediaQuery({ query: '(min-width: 1440px)' });
+  const isDesctopOrTablet = useMediaQuery({ query: '(min-width: 768px)' });
   const [activeLink, setActiveLink] = useState('home');
 
   const handleLinkClick = (id) => {
@@ -40,7 +40,7 @@ const NavList = ({ className, children, closeMenu }) => {
             How it’s made?
           </a>
         </li>
-        {isDesctop && <li>{children}</li>}
+        {isDesctopOrTablet && <li>{children}</li>}
         <li>
           <a
             className={clsx(style.navListItem, {

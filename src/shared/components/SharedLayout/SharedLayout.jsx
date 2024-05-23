@@ -1,4 +1,4 @@
-import { Cart } from 'modules/cart';
+// import { Cart } from 'modules/cart';
 import { Footer } from 'modules/footer';
 import { Header } from 'modules/header';
 import { ArrowUp, Toastify } from '..';
@@ -11,7 +11,7 @@ const SharedLayout = ({ children }) => {
       <Header />
       {children}
       <Footer />
-      <Cart />
+      {/* <Cart /> */}
       {isDesktop && <ArrowUp />}
       <Toastify />
     </>

@@ -1,0 +1,105 @@
+.madeContant {
+    @include media(tablet) {
+        position: relative;
+        display: flex;
+        gap: 20px;
+    }
+}
+
+.imgMadeMain {
+    width: 100%;
+    border-radius: 15px;
+
+    margin-bottom: 15px;
+
+    @include media(tablet) {
+        height: 100%;
+        margin-bottom: 0;
+    }
+
+    @include media(desktop) {
+        position: absolute;
+        z-index: 2;
+        width: 500px;
+        height: 635px;
+        top: -37px;
+        left: 100px;
+    }
+}
+
+.madeThumb {
+    background-color: $primary-white-color;
+    border-radius: 15px;
+
+    padding: 20px 14px;
+
+    @include media(tablet) {
+        width: 400px;
+        padding: 70px 17px;
+    }
+
+    @include media(desktop) {
+        width: 983px;
+        padding: 140px 70px 710px 500px;
+        margin: 0 auto;
+    }
+}
+
+.madeItemElement {
+    position: relative;
+    padding-left: 15px;
+
+    &:not(:last-child) {
+        margin-bottom: 18px;
+    }
+
+    &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 5px;
+        left: 0;
+        width: 8px;
+        height: 8px;
+        border-radius: 50px;
+        background-color: $primary-dote-color;
+    }
+}
+
+.madeText {
+    @include font(14, 18);
+    letter-spacing: -0.02em;
+
+    @include media(desktop) {
+        @include font(18, 22);
+    }
+}
+
+.madeLineImg {
+    display: none;
+
+    @include media(desktop) {
+        position: absolute;
+        display: block;
+        width: 550px;
+        bottom: 0;
+        left: 200px;
+        z-index: 1;
+    }
+}
+
+.imgMadeSecond {
+    display: none;
+
+    @include media(desktop) {
+        display: block;
+        position: absolute;
+        z-index: 2;
+        bottom: -37px;
+        right: 100px;
+        width: 500px;
+        height: 635px;
+        border-radius: 15px;
+    }
+
+}

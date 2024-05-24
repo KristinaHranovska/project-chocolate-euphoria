@@ -4,7 +4,7 @@ import { MainPageHero } from 'modules/mainPageHero';
 import { Taste } from 'modules/taste';
 import { OurProducts } from 'modules/ourProducts';
 import { PicturesPart } from 'modules/picturesPart';
-// import { Reviews } from 'modules/reviews';
+import { Reviews } from 'modules/reviews';
 
 const MainPage = () => {
   return (
@@ -15,7 +15,7 @@ const MainPage = () => {
       <HowItsMade />
       <OurProducts />
       <PicturesPart />
-      {/*<Reviews /> */}
+      <Reviews />
     </main>
   );
 };

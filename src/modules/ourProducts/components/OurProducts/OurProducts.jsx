@@ -8,9 +8,9 @@ import SectionMain from 'shared/components/SectionMain/SectionMain';
 const OurProducts = () => {
   return (
     <>
-      <SectionMain>
+      <SectionMain id="ourProducts">
         <Container>
-          <MainTitle>
+          <MainTitle className={style.mainTitle}>
             Our <span className={style.accentMainTitle}>products</span>
           </MainTitle>
           <ProductsCategories />

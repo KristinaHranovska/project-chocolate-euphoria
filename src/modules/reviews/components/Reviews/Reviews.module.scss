@@ -1,0 +1,29 @@
+.mainTitle {
+    margin-bottom: 24px;
+
+    @include media(tablet) {
+        margin-bottom: 28px;
+    }
+}
+
+.accentMainTitle {
+    color: $primary-main-color;
+}
+
+.chocolateLovers {
+    display: flex;
+    justify-content: center;
+}
+
+.btnBorderColor {
+    border: 1px solid $primary-main-color;
+    border-radius: 100px;
+    transition: background-color $animation, color $animation;
+    color: $primary-text-color;
+
+    &:hover,
+    &:active {
+        background-color: $primary-main-color;
+        color: $primary-white-color;
+    }
+}

@@ -1,3 +1,11 @@
+.mainTitle {
+    margin-bottom: 24px;
+
+    @include media(tablet) {
+        margin-bottom: 28px;
+    }
+}
+
 .accentMainTitle {
     color: $primary-main-color;
 }

@@ -1,0 +1,102 @@
+.categoriesList {
+    position: relative;
+    display: flex;
+    margin-bottom: 32px;
+    padding-bottom: 2px;
+    overflow-x: auto;
+
+    &::after {
+        position: absolute;
+        content: '';
+        display: block;
+        width: 770px;
+        height: 1px;
+        background-color: $primary-darkgrey-color;
+        bottom: 1px;
+    }
+
+    @include media(tablet) {
+        margin-bottom: 40px;
+
+        &::after {
+            width: 770px;
+        }
+    }
+
+    @include media(desktop) {
+        overflow-x: hidden;
+        margin-bottom: 52px;
+
+        &::after {
+            width: 100%;
+        }
+    }
+
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.categoriesItem {
+    position: relative;
+    padding: 8px 24px;
+    white-space: nowrap;
+    cursor: pointer;
+
+    &.active {
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            z-index: 2;
+            left: 0;
+            bottom: -2px;
+            width: 100%;
+            height: 3px;
+            border-radius: 10px;
+            background-color: $primary-main-color;
+        }
+    }
+
+    @include media(desktop) {
+        padding: 12px 48px;
+
+        &::after {
+            position: absolute;
+            z-index: 2;
+            content: '';
+            display: block;
+            background-color: $primary-main-color;
+            width: 0;
+            height: 3px;
+            bottom: -2px;
+            left: 50%;
+            transition: width $animation;
+            transform: translateX(-50%);
+        }
+
+        &:hover::after,
+        &:focus::after {
+            width: 100%;
+        }
+    }
+}
+
+.category {
+    @include font(18, 28);
+    font-weight: normal;
+    letter-spacing: 0.02em;
+    transition: font-weight $animation;
+
+    &.active {
+        font-weight: 600;
+    }
+
+    @include media(desktop) {
+        @include font(24, 32);
+    }
+}

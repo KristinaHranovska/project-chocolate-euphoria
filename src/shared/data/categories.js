@@ -1,5 +1,9 @@
 const dbCategories = [
     {
+        key: 'all',
+        name: 'All'
+    },
+    {
         key: 'dark',
         name: 'Dark chocolate'
     },

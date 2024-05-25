@@ -1,7 +1,16 @@
-.fotterInformThumb {
+.footerInformThumb {
+    border-bottom: 1px solid $primary-border-footer-color;
+    width: 100%;
+
     @include media(tablet) {
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    @include media(desktop) {
+        align-items: center;
+        padding-bottom: 40px;
     }
 }
 
@@ -27,8 +36,12 @@
     }
 }
 
-.fotterAddress {
+.footerAddress {
     margin-bottom: 32px;
+
+    @include media(desktop) {
+        margin-bottom: 0;
+    }
 }
 
 .footerText {

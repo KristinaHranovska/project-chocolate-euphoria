@@ -32,11 +32,6 @@
     display: block;
     transition: none;
 
-    &:hover,
-    :active {
-        color: $primary-white-color;
-    }
-
     &::before,
     &::after {
         display: none;

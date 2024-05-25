@@ -1,0 +1,54 @@
+.fotterInformThumb {
+    @include media(tablet) {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.footerTitle {
+    width: 300px;
+    @include font(24, 28);
+    color: $primary-white-color;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    margin-bottom: 30px;
+
+    @include media(tablet) {
+        @include font(28, 34);
+        margin-bottom: 25px;
+    }
+
+    @include media(desktop) {
+        margin-bottom: 0;
+    }
+
+    .accentMainTitle {
+        color: $primary-main-color;
+    }
+}
+
+.fotterAddress {
+    margin-bottom: 32px;
+}
+
+.footerText {
+    @include font(14, 18);
+    font-weight: 500;
+    font-style: normal;
+    color: $primary-white-color;
+    margin-bottom: 14px;
+}
+
+.footerContactsList {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.footerLink {
+    display: block;
+    @include font(14, 18);
+    font-style: normal;
+    color: $primary-white-color;
+    letter-spacing: -0.02em;
+}

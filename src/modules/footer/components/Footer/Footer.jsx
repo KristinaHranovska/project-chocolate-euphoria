@@ -1,13 +1,14 @@
 import { Container } from 'shared/components';
-import s from './Footer.module.scss';
-import SocialIcons from '../SocialIcons/SocialIcons';
+import style from './Footer.module.scss';
+// import SocialIcons from '../SocialIcons/SocialIcons';
+import FooterContent from '../FooterContent/FooterContent';
 
 const Footer = () => {
   return (
-    <footer className={s.footer}>
+    <footer className={style.footer}>
       <Container>
-        <h2>Footer</h2>
-        <SocialIcons />
+        <FooterContent />
+        {/* <SocialIcons /> */}
       </Container>
     </footer>
   );

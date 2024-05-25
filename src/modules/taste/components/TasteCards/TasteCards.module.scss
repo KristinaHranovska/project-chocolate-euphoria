@@ -246,6 +246,7 @@
     height: 40px;
     stroke: $primary-text-color;
     fill: transparent;
+    cursor: pointer;
     animation: moveArrow 1s infinite alternate;
 
     &:active {

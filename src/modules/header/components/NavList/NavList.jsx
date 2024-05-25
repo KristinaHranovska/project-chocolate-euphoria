@@ -5,7 +5,7 @@ import { useMediaQuery } from 'react-responsive';
 import style from './NavList.module.scss';
 import { scrollToElementById } from 'helpers/scrollToElementById';
 
-const NavList = ({ className, children, closeMenu }) => {
+const NavList = ({ className, children, listItemClass, closeMenu }) => {
   const isDesctopOrTablet = useMediaQuery({ query: '(min-width: 768px)' });
   const [activeLink, setActiveLink] = useState('home');
 
@@ -22,7 +22,7 @@ const NavList = ({ className, children, closeMenu }) => {
       <ul className={className}>
         <li>
           <a
-            className={clsx(style.navListItem, {
+            className={clsx(style.navListItem, listItemClass, {
               [style.activeLink]: activeLink === 'home',
             })}
             onClick={() => handleLinkClick('home')}
@@ -32,7 +32,7 @@ const NavList = ({ className, children, closeMenu }) => {
         </li>
         <li>
           <a
-            className={clsx(style.navListItem, {
+            className={clsx(style.navListItem, listItemClass, {
               [style.activeLink]: activeLink === 'howItsMade',
             })}
             onClick={() => handleLinkClick('howItsMade')}
@@ -43,7 +43,7 @@ const NavList = ({ className, children, closeMenu }) => {
         {isDesctopOrTablet && <li>{children}</li>}
         <li>
           <a
-            className={clsx(style.navListItem, {
+            className={clsx(style.navListItem, listItemClass, {
               [style.activeLink]: activeLink === 'ourProducts',
             })}
             onClick={() => handleLinkClick('ourProducts')}
@@ -53,7 +53,7 @@ const NavList = ({ className, children, closeMenu }) => {
         </li>
         <li>
           <a
-            className={clsx(style.navListItem, {
+            className={clsx(style.navListItem, listItemClass, {
               [style.activeLink]: activeLink === 'chocolateIsLoved',
             })}
             onClick={() => handleLinkClick('chocolateIsLoved')}

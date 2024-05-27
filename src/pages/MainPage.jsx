@@ -5,6 +5,7 @@ import { Taste } from 'modules/taste';
 import { OurProducts } from 'modules/ourProducts';
 import { PicturesPart } from 'modules/picturesPart';
 import { Reviews } from 'modules/reviews';
+// import { Cart } from 'modules/cart';
 
 const MainPage = () => {
   return (
@@ -16,6 +17,7 @@ const MainPage = () => {
       <OurProducts />
       <PicturesPart />
       <Reviews />
+      {/* <Cart/> */}
     </main>
   );
 };

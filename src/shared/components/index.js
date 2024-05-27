@@ -7,3 +7,4 @@ export { default as BasketButton } from './BasketButton/BasketButton';
 export { default as SocialMedia } from './SocialMedia/SocialMedia';
 export { default as ArrowUp } from './ArrowUp/ArrowUp';
 export { default as MainText } from './MainText/MainText';
+export { default as ModalWindow } from './ModalWindow/ModalWindow';

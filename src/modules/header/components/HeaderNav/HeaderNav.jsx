@@ -1,18 +1,18 @@
 import clsx from 'clsx';
 import { useState, useRef, useEffect } from 'react';
 import { CSSTransition } from 'react-transition-group';
-import { useMediaQuery } from 'react-responsive';
 
 import { icons as sprite } from 'shared/icons';
 import style from './HeaderNav.module.scss';
 import NavList from '../NavList/NavList';
 import { Logo, SocialMedia } from 'shared/components';
+import { useMedia } from 'hooks/useMedia';
 
 const HeaderNav = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scroll, setScroll] = useState(false);
   const overlayMenuRef = useRef(null);
-  const isMobile = useMediaQuery({ query: '(max-width: 375px)' });
+  const { isMobile } = useMedia();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);

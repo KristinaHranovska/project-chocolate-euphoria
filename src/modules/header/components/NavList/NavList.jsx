@@ -1,12 +1,12 @@
 import clsx from 'clsx';
 import { useState } from 'react';
 
-import { useMediaQuery } from 'react-responsive';
 import style from './NavList.module.scss';
 import { scrollToElementById } from 'helpers/scrollToElementById';
+import { useMedia } from 'hooks/useMedia';
 
 const NavList = ({ className, children, listItemClass, closeMenu }) => {
-  const isDesctopOrTablet = useMediaQuery({ query: '(min-width: 768px)' });
+  const { isTablet, isDesktop } = useMedia();
   const [activeLink, setActiveLink] = useState('home');
 
   const handleLinkClick = (id) => {
@@ -40,7 +40,7 @@ const NavList = ({ className, children, listItemClass, closeMenu }) => {
             How it’s made?
           </a>
         </li>
-        {isDesctopOrTablet && <li>{children}</li>}
+        {(isTablet || isDesktop) && <li>{children}</li>}
         <li>
           <a
             className={clsx(style.navListItem, listItemClass, {

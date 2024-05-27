@@ -8,12 +8,13 @@
 
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 
   margin-top: 5px;
   padding: 0 20px;
 
   @include media(tablet) {
+    justify-content: center;
     padding-top: 10px;
     margin-top: 0;
   }

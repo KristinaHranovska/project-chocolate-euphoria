@@ -1,12 +1,11 @@
-import { useMediaQuery } from 'react-responsive';
-
 import { Button } from 'shared/components';
 import style from './HeroInfom.module.scss';
 import HeroSocial from '../HeroSocial/HeroSocial';
 import { scrollToElementById } from 'helpers/scrollToElementById';
+import { useMedia } from 'hooks/useMedia';
 
 const HeroInfom = () => {
-  const isDesctop = useMediaQuery({ query: '(min-width: 1440px)' });
+  const { isDesktop } = useMedia();
 
   const handleBuyNowClick = () => {
     scrollToElementById('ourProducts');
@@ -18,7 +17,7 @@ const HeroInfom = () => {
 
   return (
     <div className={style.heroInform}>
-      {isDesctop && <HeroSocial />}
+      {isDesktop && <HeroSocial />}
       <h1 className={style.heroMainTitle}>
         Treat yourself or a loved one to our finest ingredients for a moment of
         pure delight!

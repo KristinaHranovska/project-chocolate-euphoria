@@ -1,19 +1,19 @@
-import { useMediaQuery } from 'react-responsive';
-
 import benefits from 'modules/benefit/helpers/benefits';
 import { Container } from 'shared/components';
 import style from './Benefits.module.scss';
 import { icons as sprite } from 'shared/icons';
 import { imagesDesktop2x } from 'shared/images';
 import SectionMain from 'shared/components/SectionMain/SectionMain';
+import { useMedia } from 'hooks/useMedia';
 
 const Benefits = () => {
-  const isTabletOrDesktop = useMediaQuery({ query: '(min-width: 768px)' });
+  const { isTablet, isDesktop } = useMedia();
+
   return (
     <SectionMain className={style.benefitsSection}>
       <h2 className={style.visuallyHidden}>Benefits</h2>
       <div className={style.benefitsThumb}>
-        {isTabletOrDesktop && (
+        {(isTablet || isDesktop) && (
           <img
             className={style.benefitsImgUp}
             src={imagesDesktop2x.lineUp2x}
@@ -37,7 +37,7 @@ const Benefits = () => {
             ))}
           </ul>
         </Container>
-        {isTabletOrDesktop && (
+        {(isTablet || isDesktop) && (
           <img
             className={style.benefitsImgDown}
             src={imagesDesktop2x.lineDown2x}

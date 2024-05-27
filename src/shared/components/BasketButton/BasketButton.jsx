@@ -5,7 +5,7 @@ import { ModalWindow } from '..';
 import { Cart } from 'modules/cart';
 
 const BasketButton = () => {
-  const [isCartOpen, setIsCartOpen] = useState(false); // Стан для відстеження відкриття/закриття корзини
+  const [isCartOpen, setIsCartOpen] = useState(false);
 
   const openCartModal = () => {
     setIsCartOpen(true);

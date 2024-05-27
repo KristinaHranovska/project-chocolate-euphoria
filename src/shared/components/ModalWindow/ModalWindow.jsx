@@ -1,10 +1,20 @@
+import { useEffect } from 'react';
 import Modal from 'react-modal';
-
-// import style from './ModalWindow.module.scss';
 
 Modal.setAppElement('#root');
 
 const ModalWindow = ({ isOpen, onRequestClose, title, children }) => {
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isOpen]);
+
   return (
     <Modal
       isOpen={isOpen}
@@ -13,6 +23,7 @@ const ModalWindow = ({ isOpen, onRequestClose, title, children }) => {
       style={{
         overlay: {
           backgroundColor: 'rgba(0, 0, 0, 0.5)',
+          zIndex: '5',
         },
         content: {
           top: '50%',
@@ -24,7 +35,6 @@ const ModalWindow = ({ isOpen, onRequestClose, title, children }) => {
         },
       }}
     >
-      <h2>{title}</h2>
       <button onClick={onRequestClose}>Закрити</button>
       {children}
     </Modal>

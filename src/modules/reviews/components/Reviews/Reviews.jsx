@@ -1,8 +1,9 @@
-import style from './Reviews.module.scss';
-
-import { Button, Container, MainTitle } from 'shared/components';
+import { Container, MainTitle } from 'shared/components';
 import SectionMain from 'shared/components/SectionMain/SectionMain';
 import ReviewCard from '../ReviewCard/ReviewCard';
+
+import style from './Reviews.module.scss';
+import LeaveFeedback from '../LeaveFeedback/LeaveFeedback';
 
 const Reviews = () => {
   return (
@@ -14,7 +15,7 @@ const Reviews = () => {
           </MainTitle>
           <div className={style.chocolateLovers}>
             <ReviewCard />
-            <Button className={style.btnBorderColor} title={'Leave a review'} />
+            <LeaveFeedback />
           </div>
         </Container>
       </SectionMain>

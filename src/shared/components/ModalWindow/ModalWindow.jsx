@@ -1,6 +1,9 @@
 import { useEffect } from 'react';
 import Modal from 'react-modal';
 
+import { icons as sprite } from 'shared/icons';
+import style from './ModalWindow.module.scss';
+
 Modal.setAppElement('#root');
 
 const ModalWindow = ({ isOpen, onRequestClose, title, children }) => {
@@ -32,10 +35,15 @@ const ModalWindow = ({ isOpen, onRequestClose, title, children }) => {
           bottom: 'auto',
           marginRight: '-50%',
           transform: 'translate(-50%, -50%)',
+          padding: '32px 24px',
         },
       }}
     >
-      <button onClick={onRequestClose}>Закрити</button>
+      <button onClick={onRequestClose} className={style.closeButton}>
+        <svg className={style.iconClose}>
+          <use xlinkHref={`${sprite}#close`} />
+        </svg>
+      </button>
       {children}
     </Modal>
   );

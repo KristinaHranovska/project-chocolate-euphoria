@@ -1,6 +1,5 @@
 import { useEffect } from 'react';
 import Modal from 'react-modal';
-
 import { icons as sprite } from 'shared/icons';
 import style from './ModalWindow.module.scss';
 
@@ -28,17 +27,13 @@ const ModalWindow = ({ isOpen, onRequestClose, title, children }) => {
           backgroundColor: 'rgba(0, 0, 0, 0.5)',
           zIndex: '15',
         },
-        content: {
-          top: '50%',
-          left: '50%',
-          right: 'auto',
-          bottom: 'auto',
-          marginRight: '-50%',
-          transform: 'translate(-50%, -50%)',
-          padding: '32px',
-          backgroundColor: '#dddddd',
-        },
       }}
+      className={{
+        base: style.modalContent,
+        afterOpen: style.modalContentOpen,
+        beforeClose: style.beforeClose,
+      }}
+      closeTimeoutMS={300}
     >
       <button onClick={onRequestClose} className={style.closeButton}>
         <svg className={style.iconClose}>

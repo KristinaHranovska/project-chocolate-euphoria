@@ -29,7 +29,8 @@
     "redux-persist": "^6.0.0",
     "sass": "^1.71.1",
     "swiper": "^11.0.7",
-    "vite-plugin-style-import": "^2.0.0"
+    "vite-plugin-style-import": "^2.0.0",
+    "yup": "^1.4.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.56",

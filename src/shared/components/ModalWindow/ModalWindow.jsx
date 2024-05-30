@@ -40,7 +40,7 @@ const ModalWindow = ({ isOpen, onRequestClose, title, children }) => {
           <use xlinkHref={`${sprite}#close`} />
         </svg>
       </button>
-      <h2 className={style.cartTitle}>{title}</h2>
+      {title && <h2 className={style.cartTitle}>{title}</h2>}
       {children}
     </Modal>
   );

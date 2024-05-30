@@ -10,3 +10,47 @@
         color: $primary-white-color;
     }
 }
+
+.formReview {
+    width: 300px;
+}
+
+.accentMainTitle {
+    color: $primary-main-color;
+}
+
+.btnSubscribe {
+    background-color: $primary-main-color;
+    border-radius: 100px;
+    transition: background-color $animation, color $animation;
+
+    &:hover,
+    &:active {
+        color: $primary-main-color;
+        background-color: $primary-hover-color;
+    }
+}
+
+.formReview .formInput {
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid rgba(46, 47, 66, 0.40);
+    background-color: transparent;
+    outline: transparent;
+    color: $primary-text-color;
+
+    transition: border-color .4s cubic-bezier(.4, 0, .2, 1), box-shadow .6s cubic-bezier(.4, 0, .2, 1);
+
+    margin-bottom: 15px;
+    padding: 8px 35px;
+}
+
+.errorName {
+    border-color: $error-input-color;
+}
+
+.errorSpan {
+    color: $error-input-color;
+    margin-top: -8px;
+    margin-bottom: 10px;
+}

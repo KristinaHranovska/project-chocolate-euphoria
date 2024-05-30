@@ -29,26 +29,35 @@
 }
 
 .modalContent {
-    position: absolute;
-    top: 50%;
-    left: 50%;
+    position: relative;
+    width: 375px;
 
     opacity: 0;
-    transform: scale(0.5);
     background-color: #dddddd;
     border-radius: 10px;
 
     z-index: 15;
     transition: opacity $animation, transform $animation;
     padding: 35px 24px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include media(tablet) {
+        width: 672px;
+    }
+
+    @include media(desktop) {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin: 0;
+    }
 }
 
 .modalContentOpen {
     opacity: 1;
-    transform: translate(-50%, -50%) scale(1);
 }
 
 .modalContent.beforeClose {
     opacity: 0;
-    transform: translate(-50%, -50%) scale(0.5);
 }

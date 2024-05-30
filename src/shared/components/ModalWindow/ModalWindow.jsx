@@ -26,6 +26,7 @@ const ModalWindow = ({ isOpen, onRequestClose, title, children }) => {
         overlay: {
           backgroundColor: 'rgba(0, 0, 0, 0.5)',
           zIndex: '15',
+          overflow: 'auto',
         },
       }}
       className={{

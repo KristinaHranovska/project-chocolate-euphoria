@@ -1,0 +1,75 @@
+.imgCart {
+    width: 335px;
+    height: 256px;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url(../../images/cartWrapper.png);
+
+    margin-bottom: 25px;
+
+    @include media(tablet) {
+        height: 404px;
+        width: 576px;
+    }
+}
+
+.wrapperInform {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.cartTitle {
+    @include font(18, 28);
+    font-weight: 600;
+    letter-spacing: 0.02em;
+
+    @include media(tablet) {
+        @include font(20, 28);
+    }
+
+    @include media(desktop) {
+        @include font(24, 32);
+    }
+}
+
+.cartDescription {
+    @include font(16, 24);
+    letter-spacing: 0.04em;
+    text-align: center;
+
+    @include media(tablet) {
+        @include font(18, 28);
+    }
+
+    @include media(desktop) {
+        @include font(18, 28);
+    }
+}
+
+.cartLine {
+    display: block;
+    height: 1px;
+    width: 100%;
+    background-color: $primary-darkgrey-color;
+}
+
+.btnOrangeStyle {
+    width: 100%;
+    background-color: $primary-main-color;
+    border-radius: 100px;
+    transition: background-color $animation, color $animation;
+
+    &:hover,
+    &:active {
+        color: $primary-main-color;
+        background-color: $primary-hover-color;
+    }
+
+    @include media(tablet) {
+        width: 165px;
+    }
+}

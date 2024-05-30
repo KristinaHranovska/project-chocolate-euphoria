@@ -1,15 +1,12 @@
-import { Container } from 'shared/components';
-import s from './Cart.module.scss';
+// import style from './Cart.module.scss';
 
-const Cart = () => {
+import EmptyCart from '../EmptyCart/EmptyCart';
+
+const Cart = ({ closeCartModal }) => {
   return (
-    <section>
-      <Container>
-        <form>
-          <h2 className={s.title}>Cart Products List</h2>
-        </form>
-      </Container>
-    </section>
+    <>
+      <EmptyCart closeCartModal={closeCartModal} />
+    </>
   );
 };
 

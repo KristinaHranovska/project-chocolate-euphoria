@@ -26,7 +26,7 @@ const ModalWindow = ({ isOpen, onRequestClose, title, children }) => {
       style={{
         overlay: {
           backgroundColor: 'rgba(0, 0, 0, 0.5)',
-          zIndex: '5',
+          zIndex: '15',
         },
         content: {
           top: '50%',
@@ -35,7 +35,8 @@ const ModalWindow = ({ isOpen, onRequestClose, title, children }) => {
           bottom: 'auto',
           marginRight: '-50%',
           transform: 'translate(-50%, -50%)',
-          padding: '32px 24px',
+          padding: '32px',
+          backgroundColor: '#dddddd',
         },
       }}
     >
@@ -44,6 +45,7 @@ const ModalWindow = ({ isOpen, onRequestClose, title, children }) => {
           <use xlinkHref={`${sprite}#close`} />
         </svg>
       </button>
+      <h2 className={style.cartTitle}>{title}</h2>
       {children}
     </Modal>
   );

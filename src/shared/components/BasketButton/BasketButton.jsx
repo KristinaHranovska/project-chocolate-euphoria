@@ -22,8 +22,12 @@ const BasketButton = () => {
           <use xlinkHref={`${sprite}#basket`} />
         </svg>
       </div>
-      <ModalWindow isOpen={isCartOpen} onRequestClose={closeCartModal}>
-        <Cart />
+      <ModalWindow
+        isOpen={isCartOpen}
+        onRequestClose={closeCartModal}
+        title={'Your shopping cart'}
+      >
+        <Cart closeCartModal={closeCartModal} />
       </ModalWindow>
     </>
   );

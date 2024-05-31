@@ -5,7 +5,7 @@ import style from './ModalWindow.module.scss';
 
 Modal.setAppElement('#root');
 
-const ModalWindow = ({ isOpen, onRequestClose, title, children }) => {
+const ModalWindow = ({ isOpen, onRequestClose, title, children, type }) => {
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden';
@@ -39,7 +39,9 @@ const ModalWindow = ({ isOpen, onRequestClose, title, children }) => {
       closeTimeoutMS={300}
     >
       <button onClick={onRequestClose} className={style.closeButton}>
-        <svg className={style.iconClose}>
+        <svg
+          className={`${style.iconClose} ${type === 'subscribe' ? style.iconCloseSubscribe : style.iconCloseModal}`}
+        >
           <use xlinkHref={`${sprite}#close`} />
         </svg>
       </button>

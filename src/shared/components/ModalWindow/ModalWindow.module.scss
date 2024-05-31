@@ -7,12 +7,19 @@
 .iconClose {
     width: 28px;
     height: 28px;
-    stroke: $primary-text-color;
 
     @include media(tablet) {
         width: 32px;
         height: 32px;
     }
+}
+
+.iconCloseSubscribe {
+    stroke: $primary-white-color;
+}
+
+.iconCloseModal {
+    stroke: $primary-text-color;
 }
 
 .cartTitle {

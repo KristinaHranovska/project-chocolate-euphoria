@@ -21,6 +21,6 @@ export const FeedbackSchema = Yup.object().shape({
         ),
     comment: Yup.string()
         .min(10, "Too Short!")
-        .max(50, "Too Long!")
+        .max(150, "Too Long!")
         .required("Required"),
 });

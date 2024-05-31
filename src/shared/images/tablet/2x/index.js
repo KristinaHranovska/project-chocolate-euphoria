@@ -12,6 +12,7 @@ import smallFour2x from './smallFour2x.webp'
 import smallOne2x from './smallOne2x.webp'
 import smallThree2x from './smallThree2x.webp'
 import smallTwo2x from './smallTwo2x.webp'
+import popup2x from './popup2x.webp'
 
 
 const imagesTablet2x = {
@@ -28,7 +29,8 @@ const imagesTablet2x = {
     smallFour2x,
     smallOne2x,
     smallThree2x,
-    smallTwo2x
+    smallTwo2x,
+    popup2x
 }
 
 export default imagesTablet2x;

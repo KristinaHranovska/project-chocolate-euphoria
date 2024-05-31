@@ -13,6 +13,7 @@
 
 
 .imgSubscribe {
+    height: 200px;
     position: absolute;
     top: 0;
     left: 0;
@@ -20,14 +21,11 @@
     width: 100%;
     border-top-left-radius: 9px;
     border-top-right-radius: 9px;
+
 }
 
 .formReview {
     padding-top: 190px;
-
-    @include media(tablet) {
-        padding-top: 230px;
-    }
 }
 
 .reviewTitle {
@@ -37,6 +35,11 @@
     text-transform: uppercase;
     text-align: center;
     margin-bottom: 15px;
+
+    @include media(tablet) {
+        @include font(24, 28);
+        margin-bottom: 30px;
+    }
 }
 
 .accentMainTitle {
@@ -70,6 +73,11 @@
     &:hover+.formLabel {
         color: $primary-main-color;
     }
+
+    @include media(tablet) {
+        padding: 22px 24px;
+        font-size: 18px;
+    }
 }
 
 .formLabel {
@@ -79,6 +87,12 @@
     transition: top $animation, font-size $animation, color $animation;
     pointer-events: none;
     color: $primary-placeholder-color;
+
+    @include media(tablet) {
+        top: 24px;
+        left: 24px;
+        font-size: 18px;
+    }
 }
 
 .formInput:focus+.formLabel,
@@ -87,15 +101,28 @@
     font-size: 12px;
     background-color: #dddddd;
     padding: 0 5px;
-    color: $primary-black-color;
+    color: $primary-main-color;
+
+    @include media(tablet) {
+        font-size: 16px;
+    }
 }
 
 .formInputPhone {
     padding-left: 100px;
+
+    @include media(tablet) {
+        padding-left: 115px;
+    }
 }
 
 .formPhone {
     padding-left: 118px;
+
+    @include media(tablet) {
+        padding-left: 140px;
+    }
+
 }
 
 .wrapperCode {
@@ -109,22 +136,40 @@
 
     border-right: 3px solid $primary-placeholder-color;
     padding-right: 10px;
+
+    @include media(tablet) {
+        top: 17px;
+        left: 24px;
+    }
 }
 
 .iconFlag {
     width: 24px;
     height: 24px;
+
+    @include media(tablet) {
+        width: 32px;
+        height: 32px;
+    }
 }
 
 .codeNaumber {
     @include font(16, 14);
     font-weight: 500;
     letter-spacing: -0.02em;
+
+    @include media(tablet) {
+        @include font(18, 22)
+    }
 }
 
 .formTextarea {
     height: 91px;
     resize: none;
+
+    @include media(tablet) {
+        height: 137px;
+    }
 }
 
 .errorName {

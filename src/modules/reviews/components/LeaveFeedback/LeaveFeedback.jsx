@@ -151,7 +151,7 @@ const LeaveFeedback = () => {
                     }`}
                     as="textarea"
                     name="comment"
-                    maxlength="150"
+                    maxLength="150"
                     id={textId}
                     placeholder=" "
                   />

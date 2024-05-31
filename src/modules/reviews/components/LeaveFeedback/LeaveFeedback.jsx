@@ -1,9 +1,11 @@
-import { Field, Form, Formik, ErrorMessage } from 'formik';
+import { useDispatch, useSelector } from 'react-redux';
+import { Field, Formik, ErrorMessage, Form } from 'formik';
 import toast from 'react-hot-toast';
 import useModal from 'hooks/useModal';
 import { useId } from 'react';
 import { Button, ModalWindow } from 'shared/components';
-import { FeedbackSchema, initialValuesReview } from 'modules/reviews/helpers';
+import { FeedbackSchema } from 'modules/reviews/helpers';
+import { clearFormValues, setFormValues } from '@redux/form/formSlice';
 
 import style from './LeaveFeedback.module.scss';
 import { icons as sprite } from 'shared/icons';
@@ -18,6 +20,8 @@ import {
 
 const LeaveFeedback = () => {
   const feedbackModal = useModal();
+  const dispatch = useDispatch();
+  const formValues = useSelector((state) => state.form.values);
   const nameId = useId();
   const emailId = useId();
   const phoneId = useId();
@@ -26,6 +30,8 @@ const LeaveFeedback = () => {
   const handleSubmit = (values, actions) => {
     toast.success('We received your excellent feedback ❤️');
     actions.resetForm();
+    dispatch(clearFormValues());
+    feedbackModal.closeModal();
   };
 
   return (
@@ -68,12 +74,12 @@ const LeaveFeedback = () => {
           </h2>
 
           <Formik
-            initialValues={initialValuesReview}
+            initialValues={formValues}
             validationSchema={FeedbackSchema}
             onSubmit={handleSubmit}
           >
-            {({ errors, touched }) => (
-              <Form>
+            {({ errors, touched, values, handleChange, handleBlur }) => (
+              <Form onChange={() => dispatch(setFormValues(values))}>
                 <div className={style.fieldThumb}>
                   <Field
                     className={`${style.formInput} ${
@@ -83,6 +89,9 @@ const LeaveFeedback = () => {
                     name="name"
                     id={nameId}
                     placeholder=" "
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    value={values.name}
                   />
                   <label className={style.formLabel} htmlFor={nameId}>
                     Name
@@ -103,6 +112,9 @@ const LeaveFeedback = () => {
                     name="email"
                     id={emailId}
                     placeholder=" "
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    value={values.email}
                   />
                   <label className={style.formLabel} htmlFor={emailId}>
                     Enter your email
@@ -123,6 +135,9 @@ const LeaveFeedback = () => {
                     name="phone"
                     id={phoneId}
                     placeholder=" "
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    value={values.phone}
                   />
                   <label
                     className={`${style.formLabel} ${style.formInputPhone}`}
@@ -154,6 +169,9 @@ const LeaveFeedback = () => {
                     maxLength="150"
                     id={textId}
                     placeholder=" "
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    value={values.comment}
                   />
                   <label className={style.formLabel} htmlFor={textId}>
                     Enter your review

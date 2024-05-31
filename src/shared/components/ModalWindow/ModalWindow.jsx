@@ -27,6 +27,8 @@ const ModalWindow = ({ isOpen, onRequestClose, title, children }) => {
           backgroundColor: 'rgba(0, 0, 0, 0.5)',
           zIndex: '15',
           overflow: 'auto',
+          display: 'grid',
+          placeItems: 'center',
         },
       }}
       className={{

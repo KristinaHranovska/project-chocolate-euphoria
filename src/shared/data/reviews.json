@@ -3,36 +3,42 @@
         "name": "Natalia Sus",
         "email": "natilia@gmail.com",
         "feedback": "The chocolate assortment was delicious. Both dark and milk chocolate pieces were smooth and just right on the sweetness level.",
-        "photo": "https://res.cloudinary.com/dntbkzhtq/image/upload/v1715618619/NataliaSus_ajecik.webp"
+        "photo": "https://res.cloudinary.com/dntbkzhtq/image/upload/v1715618619/NataliaSus_ajecik.webp",
+        "published": true
     },
     {
         "name": "Nazar Babenko",
         "email": "nazar@gmail.com",
         "feedback": "This chocolate confection is a delight! A delight! The wafer is light and crisp, the hazelnut cream is smooth, and the chocolate is good.",
-        "photo": "https://res.cloudinary.com/dntbkzhtq/image/upload/v1715618619/NazarBabenko_yiagj0.webp"
+        "photo": "https://res.cloudinary.com/dntbkzhtq/image/upload/v1715618619/NazarBabenko_yiagj0.webp",
+        "published": true
     },
     {
         "name": "Irina Tydnyuk",
         "email": "irina@gmail.com",
         "feedback": "This is simply the best chocolate around, and I'm just thrilled to support a local company! Best local chocolate - world class :)",
-        "photo": "https://res.cloudinary.com/dntbkzhtq/image/upload/v1715618619/IrinaTydnyuk_s2ta6y.webp"
+        "photo": "https://res.cloudinary.com/dntbkzhtq/image/upload/v1715618619/IrinaTydnyuk_s2ta6y.webp",
+        "published": true
     },
     {
         "name": "Olena Kampusch",
         "email": "olena@gmail.com",
         "feedback": "Chocolate is a family favourite treat. Love the delicious smooth chocolate and the creaminess inside. The wafer is soft but crunchy.",
-        "photo": "https://res.cloudinary.com/dntbkzhtq/image/upload/v1715618619/OlenaKampusch_i1yp7e.webp"
+        "photo": "https://res.cloudinary.com/dntbkzhtq/image/upload/v1715618619/OlenaKampusch_i1yp7e.webp",
+        "published": true
     },
     {
         "name": "Danilo Nottingham",
         "email": "danilo@gmail.com",
         "feedback": "This is delicious. It so rich and flavorful you don’t need to use as many. I love topping an apple with almond butter and these chips for a snack.",
-        "photo": "https://res.cloudinary.com/dntbkzhtq/image/upload/v1715618619/DaniloNottingham_n3iv24.webp"
+        "photo": "https://res.cloudinary.com/dntbkzhtq/image/upload/v1715618619/DaniloNottingham_n3iv24.webp",
+        "published": true
     },
     {
         "name": "Victoria Dobrzhanska",
         "email": "victoria@gmail.com",
         "feedback": "I love this chocolate bar. Perfect combination of light crispy wafer, covered in a thin layer chocolate.",
-        "photo": "https://res.cloudinary.com/dntbkzhtq/image/upload/v1715618620/VictoriaDobrzhanska_xnln1q.webp"
+        "photo": "https://res.cloudinary.com/dntbkzhtq/image/upload/v1715618620/VictoriaDobrzhanska_xnln1q.webp",
+        "published": true
     }
 ]

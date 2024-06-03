@@ -7,6 +7,8 @@ import { Button, ModalWindow } from 'shared/components';
 import { FeedbackSchema } from 'modules/reviews/helpers';
 import { clearFormValues, setFormValues } from '@redux/form/formSlice';
 
+import { postReviews } from 'modules/reviews/api/reviewsApi';
+
 import style from './LeaveFeedback.module.scss';
 import { icons as sprite } from 'shared/icons';
 import {
@@ -27,11 +29,19 @@ const LeaveFeedback = () => {
   const phoneId = useId();
   const textId = useId();
 
-  const handleSubmit = (values, actions) => {
-    toast.success('We received your excellent feedback ❤️');
-    actions.resetForm();
-    dispatch(clearFormValues());
-    feedbackModal.closeModal();
+  const handleSubmit = async (values, actions) => {
+    try {
+      await postReviews(values);
+
+      actions.resetForm();
+
+      dispatch(clearFormValues());
+      feedbackModal.closeModal();
+
+      toast.success('We received your excellent feedback ❤️');
+    } catch (error) {
+      toast.error(error.message);
+    }
   };
 
   return (

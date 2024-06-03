@@ -3,7 +3,6 @@ import toast from 'react-hot-toast';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
-import 'swiper/css/pagination';
 
 import { getReviews } from 'modules/reviews/api/reviewsApi';
 import style from './ReviewCard.module.scss';

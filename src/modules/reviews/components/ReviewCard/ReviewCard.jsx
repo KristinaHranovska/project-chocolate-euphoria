@@ -3,8 +3,8 @@ import toast from 'react-hot-toast';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
-
 import { getReviews } from 'modules/reviews/api/reviewsApi';
+
 import style from './ReviewCard.module.scss';
 import { icons as sprite } from 'shared/icons';
 
@@ -26,18 +26,20 @@ const ReviewCard = () => {
   }, []);
 
   return (
-    <>
+    <div className={style.card}>
       <button
         className={style.prevButton}
         onClick={() => swiper && swiper.slidePrev()}
       >
-        <svg className={style.svg} width="48" height="48">
+        <svg className={style.iconArrow}>
           <use xlinkHref={`${sprite}#arrow-left`} />
         </svg>
       </button>
 
       {reviews && reviews.length > 0 && (
         <Swiper
+          className={style.mainSwiper}
+          rewind={true}
           onSwiper={setSwiper}
           slidesPerView={1}
           autoplay={{
@@ -50,9 +52,21 @@ const ReviewCard = () => {
             .filter((review) => review.published)
             .map((review) => (
               <SwiperSlide key={review._id}>
-                <img src={review.photo} alt={review.name} />
-                <h3>{review.name}</h3>
-                <p>{review.feedback}</p>
+                <div className={style.reviewItem}>
+                  <div className={style.thumbImgCircle}>
+                    <div className={style.reviewCircle}></div>
+                    <img
+                      src={review.photo}
+                      alt={review.name}
+                      className={style.reviewImg}
+                    />
+                  </div>
+
+                  <div className={style.reviweThumb}>
+                    <h3 className={style.reviewName}>{review.name}</h3>
+                    <p className={style.review}>{review.feedback}</p>
+                  </div>
+                </div>
               </SwiperSlide>
             ))}
         </Swiper>
@@ -62,11 +76,11 @@ const ReviewCard = () => {
         className={style.nextButton}
         onClick={() => swiper && swiper.slideNext()}
       >
-        <svg className={style.svg} width="48" height="48">
+        <svg className={style.iconArrow}>
           <use xlinkHref={`${sprite}#arrow-right`} />
         </svg>
       </button>
-    </>
+    </div>
   );
 };
 

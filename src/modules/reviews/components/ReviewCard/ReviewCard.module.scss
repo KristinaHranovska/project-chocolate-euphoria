@@ -1,0 +1,200 @@
+.card {
+    position: relative;
+    height: 500px;
+    background-color: $primary-white-color;
+    border: 1px solid $primary-border-color;
+    border-radius: 15px;
+    margin-bottom: 32px;
+
+    @include media(tablet) {
+        height: 312px;
+        border-radius: 24px;
+    }
+
+    @include media(desktop) {
+        height: 356px;
+    }
+}
+
+.reviewItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding-top: 32px;
+
+    @include media(tablet) {
+        flex-direction: row;
+        padding: 76px 64px;
+    }
+
+    @include media(desktop) {
+        padding: 80px 104px;
+    }
+}
+
+.thumbImgCircle {
+    position: relative;
+    margin: 0px 0px 24px 0px;
+    width: 148px;
+    height: 136px;
+
+    @include media(tablet) {
+        margin: 12px 24px 12px 0px;
+    }
+
+    @include media(desktop) {
+        margin: 0 32px;
+        width: 212px;
+        height: 196px;
+    }
+}
+
+.reviewCircle {
+    width: 124px;
+    height: 124px;
+    background-color: $primary-circle-color;
+    border-radius: 150px;
+
+    @include media(desktop) {
+        width: 180px;
+        height: 180px;
+    }
+}
+
+.reviewImg {
+    position: absolute;
+    width: 124px;
+    height: 124px;
+    bottom: 0;
+    right: 0;
+
+    @include media(tablet) {
+        left: 10px;
+    }
+
+    @include media(desktop) {
+        width: 180px;
+        height: 180px;
+    }
+}
+
+.reviweThumb {
+    padding: 0 32px;
+
+    @include media(tablet) {
+        padding: 0;
+    }
+}
+
+.reviewName {
+    @include font(18, 25);
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    margin-bottom: 12px;
+    text-align: center;
+
+    @include media (tablet) {
+        text-align: left;
+    }
+
+    @include media (desktop) {
+        @include font(24, 28);
+        margin-bottom: 24px;
+    }
+}
+
+.review {
+    height: 120px;
+    @include font(16, 24);
+    letter-spacing: 0.04em;
+
+    @include media(tablet) {
+        height: fit-content;
+    }
+
+    @include media(desktop) {
+        @include font(18, 25);
+    }
+}
+
+.iconArrow {
+    width: 32px;
+    height: 32px;
+    stroke: $primary-text-color;
+    fill: transparent;
+
+    transition: stroke $animation;
+
+    &:active,
+    &:hover {
+        stroke: $primary-white-color;
+    }
+
+    @include media(desktop) {
+        width: 48px;
+        height: 48px;
+    }
+}
+
+.prevButton {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 32px;
+    left: 124px;
+    z-index: 2;
+
+    border-radius: 50px;
+
+    transition: background-color $animation;
+
+    &:active,
+    &:hover {
+        background-color: $primary-main-color;
+    }
+
+    @include media(tablet) {
+        height: 32px;
+        top: 140px;
+        left: 16px;
+    }
+
+    @include media(desktop) {
+        width: 48px;
+        height: 48px;
+        top: 154px;
+        left: 40px;
+    }
+}
+
+.nextButton {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 32px;
+    right: 124px;
+    z-index: 2;
+
+    border-radius: 50px;
+
+    transition: background-color $animation;
+
+    &:active,
+    &:hover {
+        background-color: $primary-main-color;
+    }
+
+    @include media(tablet) {
+        height: 32px;
+        top: 140px;
+        right: 16px;
+    }
+
+    @include media(desktop) {
+        width: 48px;
+        height: 48px;
+        top: 154px;
+        right: 40px;
+    }
+}

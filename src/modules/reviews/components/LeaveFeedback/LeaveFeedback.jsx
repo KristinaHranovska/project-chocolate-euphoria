@@ -3,10 +3,10 @@ import { Field, Formik, ErrorMessage, Form } from 'formik';
 import toast from 'react-hot-toast';
 import useModal from 'hooks/useModal';
 import { useId } from 'react';
+
 import { Button, ModalWindow } from 'shared/components';
 import { FeedbackSchema } from 'modules/reviews/helpers';
 import { clearFormValues, setFormValues } from '@redux/form/formSlice';
-
 import { postReviews } from 'modules/reviews/api/reviewsApi';
 
 import style from './LeaveFeedback.module.scss';
@@ -34,7 +34,6 @@ const LeaveFeedback = () => {
       await postReviews(values);
 
       actions.resetForm();
-
       dispatch(clearFormValues());
       feedbackModal.closeModal();
 

@@ -13,10 +13,8 @@ const Reviews = () => {
           <MainTitle className={style.mainTitle}>
             <span className={style.accentMainTitle}>Chocolate</span> is loved
           </MainTitle>
-          <div className={style.chocolateLovers}>
-            <ReviewCard />
-            <LeaveFeedback />
-          </div>
+          <ReviewCard />
+          <LeaveFeedback />
         </Container>
       </SectionMain>
     </>

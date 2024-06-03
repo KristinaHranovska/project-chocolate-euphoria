@@ -1,4 +1,5 @@
 .btnBorderColor {
+    display: block;
     border: 1px solid $primary-main-color;
     border-radius: 100px;
     transition: background-color $animation, color $animation;
@@ -9,6 +10,8 @@
         background-color: $primary-main-color;
         color: $primary-white-color;
     }
+
+    margin: 0 auto;
 }
 
 

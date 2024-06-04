@@ -2,56 +2,66 @@ import { Field, Form, Formik } from 'formik';
 import toast from 'react-hot-toast';
 import { TfiEmail } from 'react-icons/tfi';
 import style from './FooterSubscribe.module.scss';
-import { formatRegex } from 'modules/footer/helper/constants';
+import {
+  formatRegex,
+  initialValuesSubscribe,
+} from 'modules/footer/helper/constants';
 import { Button } from 'shared/components';
+import { postSubscribe } from 'modules/footer/api/subscribeApi';
 
 const FooterSubscribe = () => {
   const validate = (values) => {
     const errors = {};
-    const formattedSubscribe = values.subscribe.trim().toLowerCase();
+    const formattedSubscribe = values.email.trim().toLowerCase();
 
     if (!formattedSubscribe) {
-      errors.subscribe = 'The field cannot be empty';
+      errors.email = 'The field cannot be empty';
     } else if (!formatRegex.test(formattedSubscribe)) {
-      errors.subscribe = 'Invalid email format';
+      errors.email = 'Invalid email format';
     }
 
     return errors;
   };
 
-  const handleSubmit = (values, actions) => {
-    const formattedSubscribe = values.subscribe.trim().toLowerCase();
+  const handleSubmit = async (values, actions) => {
+    try {
+      const formattedSubscribe = values.email.trim().toLowerCase();
 
-    if (!formattedSubscribe) {
-      toast.error('The field cannot be empty!');
-      return;
-    } else if (!formatRegex.test(formattedSubscribe)) {
-      toast.error('Invalid email format!');
-      return;
+      if (!formattedSubscribe) {
+        toast.error('The field cannot be empty!');
+        return;
+      } else if (!formatRegex.test(formattedSubscribe)) {
+        toast.error('Invalid email format!');
+        return;
+      }
+
+      await postSubscribe({ email: formattedSubscribe });
+
+      toast.success('Successfully subscribed!');
+      actions.resetForm();
+    } catch (error) {
+      toast.error(error.message);
     }
-
-    toast.success('Successfully subscribed!');
-    actions.resetForm();
   };
 
   return (
     <Formik
-      initialValues={{ subscribe: '' }}
+      initialValues={initialValuesSubscribe}
       validate={validate}
       onSubmit={handleSubmit}
     >
       {({ errors, touched, handleBlur }) => (
         <Form className={style.formSubscribe}>
           <Field
-            className={`${style.inputSubscribe} ${errors.subscribe && touched.subscribe ? style.invalid : ''}`}
+            className={`${style.inputSubscribe} ${errors.email && touched.email ? style.invalid : ''}`}
             type="text"
-            name="subscribe"
+            name="email"
             placeholder="Enter your email address"
             onBlur={handleBlur}
           />
           <TfiEmail className={style.iconEmail} />
-          {errors.subscribe && touched.subscribe && (
-            <div className={style.error}>{errors.subscribe}</div>
+          {errors.email && touched.email && (
+            <div className={style.error}>{errors.email}</div>
           )}
           <Button
             title={'Subscribe'}

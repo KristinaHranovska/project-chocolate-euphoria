@@ -13,11 +13,6 @@
 .productList {
     @include media(tablet) {
         width: 560px !important;
-
-        // display: flex !important;
-        // align-items: center;
-        // justify-content: center;
-        // gap: 18px;
     }
 }
 

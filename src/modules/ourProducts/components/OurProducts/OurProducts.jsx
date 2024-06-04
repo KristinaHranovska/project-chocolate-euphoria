@@ -27,7 +27,7 @@ const OurProducts = () => {
             chooseCategory={handleCategoryChange}
             currentCategory={currentCategory}
           />
-          <Products />
+          <Products currentCategory={currentCategory} />
         </Container>
       </SectionMain>
     </>

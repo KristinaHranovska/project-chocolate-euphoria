@@ -15,7 +15,7 @@ const Products = ({ currentCategory }) => {
   const [products, setProducts] = useState([]);
   const [swiper, setSwiper] = useState(null);
   const [loading, setLoading] = useState(true);
-  const { isTablet, isDesktop, isMobile } = useMedia();
+  const { isMobile, isDesktop, isTablet } = useMedia();
 
   useEffect(() => {
     const dataProduct = async () => {
@@ -37,6 +37,12 @@ const Products = ({ currentCategory }) => {
       ? products
       : products.filter((product) => product.category === currentCategory);
 
+  const sizeProducts = filteredProducts.length;
+
+  const showButtons =
+    !(sizeProducts === 1 && (isMobile || isTablet)) &&
+    !(sizeProducts <= 3 && isDesktop);
+
   return (
     <>
       {loading ? (
@@ -52,18 +58,11 @@ const Products = ({ currentCategory }) => {
           />
         </div>
       ) : (
-        <div className={clsx({ [style.productSection]: isMobile })}>
-          {(isDesktop || isTablet) && (
-            <button
-              className={style.prevButton}
-              onClick={() => swiper && swiper.slidePrev()}
-            >
-              <svg className={style.iconArrow}>
-                <use xlinkHref={`${sprite}#arrow-left`} />
-              </svg>
-            </button>
-          )}
-
+        <div
+          className={clsx(style.productSectionMore, {
+            [style.productSection]: isMobile,
+          })}
+        >
           {filteredProducts.length > 0 && (
             <Swiper
               className={style.productList}
@@ -75,11 +74,11 @@ const Products = ({ currentCategory }) => {
                 },
                 768: {
                   slidesPerView: 2,
-                  spaceBetween: 18,
+                  spaceBetween: 15,
                 },
                 1440: {
                   slidesPerView: 3,
-                  spaceBetween: 18,
+                  spaceBetween: 22,
                 },
               }}
               autoplay={{
@@ -105,15 +104,26 @@ const Products = ({ currentCategory }) => {
             </Swiper>
           )}
 
-          {(isDesktop || isTablet) && (
-            <button
-              className={style.nextButton}
-              onClick={() => swiper && swiper.slideNext()}
-            >
-              <svg className={style.iconArrow}>
-                <use xlinkHref={`${sprite}#arrow-right`} />
-              </svg>
-            </button>
+          {showButtons && (
+            <>
+              <button
+                className={style.prevButton}
+                onClick={() => swiper && swiper.slidePrev()}
+              >
+                <svg className={style.iconArrow}>
+                  <use xlinkHref={`${sprite}#arrow-left`} />
+                </svg>
+              </button>
+
+              <button
+                className={style.nextButton}
+                onClick={() => swiper && swiper.slideNext()}
+              >
+                <svg className={style.iconArrow}>
+                  <use xlinkHref={`${sprite}#arrow-right`} />
+                </svg>
+              </button>
+            </>
           )}
         </div>
       )}

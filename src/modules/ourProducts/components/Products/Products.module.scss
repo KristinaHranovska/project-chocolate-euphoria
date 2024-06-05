@@ -4,15 +4,27 @@
 }
 
 .productSection {
+    position: relative;
+    height: 480px;
     border-radius: 15px;
     border: 1px solid $primary-border-color;
     background-color: $primary-white-color;
     padding: 32px 52px;
 }
 
+.productSectionMore {
+    @include media(tablet) {
+        position: relative;
+    }
+}
+
 .productList {
     @include media(tablet) {
-        width: 560px !important;
+        width: 640px !important;
+    }
+
+    @include media(desktop) {
+        width: 980px !important;
     }
 }
 
@@ -24,6 +36,8 @@
         border: 1px solid $primary-border-color;
         background-color: $primary-white-color;
         padding: 32px 20px;
+
+        cursor: pointer;
     }
 }
 
@@ -44,6 +58,8 @@
 
 .productName {
     @include font(18, 24);
+    width: 250px;
+    height: 50px;
     font-weight: 600;
     letter-spacing: -0.02em;
     text-transform: uppercase;
@@ -66,4 +82,85 @@
 
     @include font(14, 18);
     font-weight: 600;
+}
+
+.iconArrow {
+    width: 32px;
+    height: 32px;
+    stroke: $primary-text-color;
+    fill: transparent;
+
+    transition: stroke $animation;
+
+    &:active,
+    &:hover {
+        stroke: $primary-white-color;
+    }
+
+    @include media(desktop) {
+        width: 48px;
+        height: 48px;
+    }
+}
+
+.prevButton {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 32px;
+    left: 124px;
+    z-index: 2;
+
+    border-radius: 50px;
+
+    transition: background-color $animation;
+
+    &:active,
+    &:hover {
+        background-color: $primary-main-color;
+    }
+
+    @include media(tablet) {
+        height: 32px;
+        top: 158px;
+        left: -4px;
+    }
+
+    @include media(desktop) {
+        width: 48px;
+        height: 48px;
+        top: 154px;
+        left: 40px;
+    }
+}
+
+.nextButton {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 32px;
+    right: 124px;
+    z-index: 2;
+
+    border-radius: 50px;
+
+    transition: background-color $animation;
+
+    &:active,
+    &:hover {
+        background-color: $primary-main-color;
+    }
+
+    @include media(tablet) {
+        height: 32px;
+        top: 158px;
+        right: 0;
+    }
+
+    @include media(desktop) {
+        width: 48px;
+        height: 48px;
+        top: 154px;
+        right: 40px;
+    }
 }

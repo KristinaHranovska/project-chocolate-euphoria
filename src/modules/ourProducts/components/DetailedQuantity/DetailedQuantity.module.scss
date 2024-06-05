@@ -1,0 +1,12 @@
+.quantity {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.iconQuantity {
+    width: 26px;
+    height: 26px;
+    fill: transparent;
+    stroke: $primary-black-color;
+}

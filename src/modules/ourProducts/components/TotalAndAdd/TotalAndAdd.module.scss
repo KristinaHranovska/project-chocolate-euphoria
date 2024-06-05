@@ -1,0 +1,11 @@
+.btnOrangeStyle {
+    background-color: $primary-main-color;
+    border-radius: 100px;
+    transition: background-color $animation, color $animation;
+
+    &:hover,
+    &:active {
+        color: $primary-main-color;
+        background-color: $primary-hover-color;
+    }
+}

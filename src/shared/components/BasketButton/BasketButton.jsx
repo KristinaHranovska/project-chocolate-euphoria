@@ -1,18 +1,14 @@
 import { icons as sprite } from 'shared/icons';
 import style from './BasketButton.module.scss';
-import { useState } from 'react';
 import { ModalWindow } from '..';
 import { Cart } from 'modules/cart';
+import useModal from 'hooks/useModal';
 
 const BasketButton = () => {
-  const [isCartOpen, setIsCartOpen] = useState(false);
+  const cartModal = useModal();
 
   const openCartModal = () => {
-    setIsCartOpen(true);
-  };
-
-  const closeCartModal = () => {
-    setIsCartOpen(false);
+    cartModal.openModal();
   };
 
   return (
@@ -23,11 +19,11 @@ const BasketButton = () => {
         </svg>
       </div>
       <ModalWindow
-        isOpen={isCartOpen}
-        onRequestClose={closeCartModal}
+        isOpen={cartModal.isOpen}
+        onRequestClose={cartModal.closeModal}
         title={'Your shopping cart'}
       >
-        <Cart closeCartModal={closeCartModal} />
+        <Cart closeCartModal={cartModal.closeModal} />
       </ModalWindow>
     </>
   );

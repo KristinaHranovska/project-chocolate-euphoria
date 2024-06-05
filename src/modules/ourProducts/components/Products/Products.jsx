@@ -17,6 +17,7 @@ import DetailInform from '../DetailInform/DetailInform';
 const Products = ({ currentCategory }) => {
   const detailInformModal = useModal();
   const [products, setProducts] = useState([]);
+  const [selectedProduct, setSelectedProduct] = useState(null);
   const [swiper, setSwiper] = useState(null);
   const [loading, setLoading] = useState(true);
   const { isMobile, isDesktop, isTablet } = useMedia();
@@ -95,7 +96,10 @@ const Products = ({ currentCategory }) => {
                 <SwiperSlide
                   key={product._id}
                   className={style.prodactItem}
-                  onClick={detailInformModal.openModal}
+                  onClick={() => {
+                    setSelectedProduct(product);
+                    detailInformModal.openModal();
+                  }}
                 >
                   <img
                     className={style.prodactImg}
@@ -138,7 +142,7 @@ const Products = ({ currentCategory }) => {
             isOpen={detailInformModal.isOpen}
             onRequestClose={detailInformModal.closeModal}
           >
-            <DetailInform />
+            {selectedProduct && <DetailInform product={selectedProduct} />}
           </ModalWindow>
         </div>
       )}

@@ -10,7 +10,7 @@ const EmptyCart = ({ closeCartModal }) => {
   };
 
   return (
-    <>
+    <div className={style.emptyCart}>
       <div className={style.imgCart}></div>
       <div className={style.wrapperInform}>
         <h3 className={style.cartTitle}>The basket is empty</h3>
@@ -24,7 +24,7 @@ const EmptyCart = ({ closeCartModal }) => {
           onClick={handleBuyNowClick}
         />
       </div>
-    </>
+    </div>
   );
 };
 

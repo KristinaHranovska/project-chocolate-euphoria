@@ -7,13 +7,9 @@ import useModal from 'hooks/useModal';
 const BasketButton = () => {
   const cartModal = useModal();
 
-  const openCartModal = () => {
-    cartModal.openModal();
-  };
-
   return (
     <>
-      <div className={style.iconThumb} onClick={openCartModal}>
+      <div className={style.iconThumb} onClick={cartModal.openModal}>
         <svg className={style.basketCartIcon}>
           <use xlinkHref={`${sprite}#basket`} />
         </svg>

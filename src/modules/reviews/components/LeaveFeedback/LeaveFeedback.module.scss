@@ -28,7 +28,11 @@
 }
 
 .formReview {
-    padding-top: 190px;
+    padding: 220px 15px 35px;
+
+    @include media(tablet) {
+        padding: 220px 30px 35px;
+    }
 }
 
 .reviewTitle {

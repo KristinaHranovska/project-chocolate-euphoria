@@ -10,8 +10,12 @@ import { icons as sprite } from 'shared/icons';
 import { Bars } from 'react-loader-spinner';
 import { useMedia } from 'hooks/useMedia';
 import clsx from 'clsx';
+import useModal from 'hooks/useModal';
+import { ModalWindow } from 'shared/components';
+import DetailInform from '../DetailInform/DetailInform';
 
 const Products = ({ currentCategory }) => {
+  const detailInformModal = useModal();
   const [products, setProducts] = useState([]);
   const [swiper, setSwiper] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -88,7 +92,11 @@ const Products = ({ currentCategory }) => {
               modules={[Autoplay]}
             >
               {filteredProducts.map((product) => (
-                <SwiperSlide key={product._id} className={style.prodactItem}>
+                <SwiperSlide
+                  key={product._id}
+                  className={style.prodactItem}
+                  onClick={detailInformModal.openModal}
+                >
                   <img
                     className={style.prodactImg}
                     src={product.photo}
@@ -125,6 +133,13 @@ const Products = ({ currentCategory }) => {
               </button>
             </>
           )}
+
+          <ModalWindow
+            isOpen={detailInformModal.isOpen}
+            onRequestClose={detailInformModal.closeModal}
+          >
+            <DetailInform />
+          </ModalWindow>
         </div>
       )}
     </>

@@ -2,6 +2,20 @@
     display: flex;
     align-items: center;
     gap: 24px;
+
+    border-top: 2px solid $primary-darkgrey-color;
+    padding-top: 20px;
+    margin-bottom: 20px;
+
+    @include media(desktop) {
+        margin-bottom: 10px;
+    }
+}
+
+.quantityTitle {
+    @include font(16, 20);
+    font-weight: 600;
+    letter-spacing: 0.04em;
 }
 
 .iconQuantity {
@@ -9,4 +23,9 @@
     height: 26px;
     fill: transparent;
     stroke: $primary-black-color;
+}
+
+.quantityValue {
+    @include font(18, 24);
+    letter-spacing: 0.04em;
 }

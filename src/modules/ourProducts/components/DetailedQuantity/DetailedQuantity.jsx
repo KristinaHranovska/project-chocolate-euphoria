@@ -7,7 +7,7 @@ const DetailedQuantity = ({ quantity, setQuantity }) => {
 
   return (
     <div className={style.quantity}>
-      <h3>Quantity</h3>
+      <h3 className={style.quantityTitle}>Quantity</h3>
       <button
         className={style.quantityBtn}
         type="button"
@@ -17,7 +17,7 @@ const DetailedQuantity = ({ quantity, setQuantity }) => {
           <use xlinkHref={`${sprite}#minus`}></use>
         </svg>
       </button>
-      <span>{quantity}</span>
+      <span className={style.quantityValue}>{quantity}</span>
       <button
         className={style.quantityBtn}
         type="button"

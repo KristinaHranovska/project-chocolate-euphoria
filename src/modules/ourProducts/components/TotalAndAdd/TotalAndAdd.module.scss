@@ -1,7 +1,21 @@
 .totalPrice {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    gap: 12px;
+
+    @include media(desktop) {
+        gap: 20px;
+    }
+}
+
+.totalTitle {
+    @include font(20, 26);
+    font-weight: 600;
+    letter-spacing: 0.02em;
+}
+
+.price {
+    font-weight: 700;
 }
 
 .btnOrangeStyle {

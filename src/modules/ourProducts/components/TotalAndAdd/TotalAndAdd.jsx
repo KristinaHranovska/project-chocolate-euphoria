@@ -6,7 +6,10 @@ const TotalAndAdd = ({ quantity, price }) => {
 
   return (
     <div className={style.totalPrice}>
-      <h3>Total Price: {totalPrice.toFixed(2)} UAH</h3>
+      <h3 className={style.totalTitle}>
+        Total Price:{' '}
+        <span className={style.price}>{totalPrice.toFixed(2)} UAH</span>
+      </h3>
       <Button title={'Add to Cart'} className={style.btnOrangeStyle} />
     </div>
   );

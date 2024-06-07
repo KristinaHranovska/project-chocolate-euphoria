@@ -3,6 +3,7 @@ import { useState } from 'react';
 import DetailedQuantity from '../DetailedQuantity/DetailedQuantity';
 import TotalAndAdd from '../TotalAndAdd/TotalAndAdd';
 import style from './DetailInform.module.scss';
+import CustomScrollWrapper from 'shared/components/CustomScrollWrapper/CustomScrollWrapper';
 
 const DetailInform = ({ product }) => {
   const [quantity, setQuantity] = useState(1);
@@ -19,19 +20,27 @@ const DetailInform = ({ product }) => {
       />
 
       <div className={style.detailInfromAboutProduct}>
-        <h2>{product.productName}</h2>
-        <p>{product.category}</p>
-        <p className={style.detailDescription}>{product.description}</p>
-        <h3>Compound</h3>
-        <ul>
-          {product.compound.map((compound, index) => (
-            <li key={index}>
-              <p>{compound}</p>
-            </li>
-          ))}
-        </ul>
-        <DetailedQuantity quantity={quantity} setQuantity={setQuantity} />
-        <TotalAndAdd quantity={quantity} price={price} />
+        <div>
+          <h2 className={style.detailTitle}>{product.productName}</h2>
+          <p className={style.detailCategory}>{product.category}</p>
+          <CustomScrollWrapper wrapClassName={style.scroll}>
+            <div className={style.detailInfoThumb}>
+              <p className={style.detailDescription}>{product.description}</p>
+              <h3 className={style.detailCompound}>Compound</h3>
+              <ul>
+                {product.compound.map((compound, index) => (
+                  <li key={index}>
+                    <p className={style.detailDescription}>{compound}</p>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </CustomScrollWrapper>
+        </div>
+        <div>
+          <DetailedQuantity quantity={quantity} setQuantity={setQuantity} />
+          <TotalAndAdd quantity={quantity} price={price} />
+        </div>
       </div>
     </div>
   );

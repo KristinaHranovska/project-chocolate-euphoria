@@ -4,11 +4,12 @@ import { Button } from 'shared/components';
 import style from './TotalAndAdd.module.scss';
 import { addProductToCart } from '@redux/cart/cartSlice';
 
-const TotalAndAdd = ({ quantity, price, product }) => {
+const TotalAndAdd = ({ quantity, price, product, close }) => {
   const dispatch = useDispatch();
 
   const handleAddToCart = () => {
     dispatch(addProductToCart({ product, quantity }));
+    close();
   };
 
   const totalPrice = quantity * price;

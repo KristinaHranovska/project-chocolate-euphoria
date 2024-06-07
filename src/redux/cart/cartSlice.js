@@ -6,6 +6,7 @@ const cartSlice = createSlice({
   name: 'cart',
   initialState: {
     products: [],
+    totalQuantity: 0,
   },
   reducers: {
     addProductToCart(state, action) {
@@ -17,7 +18,36 @@ const cartSlice = createSlice({
       } else {
         state.products.push({ product, quantity });
       }
+      state.totalQuantity += quantity;
     },
+    deleteProduct(state, action) {
+      const productId = action.payload;
+      const deletedProduct = state.products.find(product => product.product._id === productId);
+      if (deletedProduct) {
+        state.totalQuantity -= deletedProduct.quantity;
+      }
+      state.products = state.products.filter(product => product.product._id !== productId);
+    },
+    removeAllProducts(state) {
+      state.products = [];
+      state.totalQuantity = 0;
+    },
+    increaseQuantity(state, action) {
+      const productId = action.payload;
+      const product = state.products.find(item => item.product._id === productId);
+      if (product) {
+        product.quantity += 1;
+        state.totalQuantity += 1;
+      }
+    },
+    decreaseQuantity(state, action) {
+      const productId = action.payload;
+      const product = state.products.find(item => item.product._id === productId);
+      if (product && product.quantity > 1) {
+        product.quantity -= 1;
+        state.totalQuantity -= 1;
+      }
+    }
   },
 
 });
@@ -33,5 +63,5 @@ export const persistedCartReducer = persistReducer(
   cartSlice.reducer
 );
 
-export const { addProductToCart } = cartSlice.actions;
+export const { addProductToCart, deleteProduct, removeAllProducts, increaseQuantity, decreaseQuantity } = cartSlice.actions;
 export default persistedCartReducer;

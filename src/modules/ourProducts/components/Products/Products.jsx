@@ -142,7 +142,12 @@ const Products = ({ currentCategory }) => {
             isOpen={detailInformModal.isOpen}
             onRequestClose={detailInformModal.closeModal}
           >
-            {selectedProduct && <DetailInform product={selectedProduct} />}
+            {selectedProduct && (
+              <DetailInform
+                product={selectedProduct}
+                closeModal={detailInformModal.closeModal}
+              />
+            )}
           </ModalWindow>
         </div>
       )}

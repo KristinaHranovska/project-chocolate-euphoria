@@ -5,7 +5,7 @@ import TotalAndAdd from '../TotalAndAdd/TotalAndAdd';
 import style from './DetailInform.module.scss';
 import CustomScrollWrapper from 'shared/components/CustomScrollWrapper/CustomScrollWrapper';
 
-const DetailInform = ({ product }) => {
+const DetailInform = ({ product, closeModal }) => {
   const [quantity, setQuantity] = useState(1);
 
   if (!product) return null;
@@ -39,7 +39,12 @@ const DetailInform = ({ product }) => {
         </div>
         <div>
           <DetailedQuantity quantity={quantity} setQuantity={setQuantity} />
-          <TotalAndAdd quantity={quantity} price={price} product={product} />
+          <TotalAndAdd
+            quantity={quantity}
+            price={price}
+            product={product}
+            close={closeModal}
+          />
         </div>
       </div>
     </div>

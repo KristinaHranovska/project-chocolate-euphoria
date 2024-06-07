@@ -6,8 +6,20 @@ const cartSlice = createSlice({
   name: 'cart',
   initialState: {
     products: [],
-    totalPrice: 0,
   },
+  reducers: {
+    addProductToCart(state, action) {
+      const { product, quantity } = action.payload;
+      const existingProductIndex = state.products.findIndex(item => item.product._id === product._id);
+
+      if (existingProductIndex !== -1) {
+        state.products[existingProductIndex].quantity += quantity;
+      } else {
+        state.products.push({ product, quantity });
+      }
+    },
+  },
+
 });
 
 const cartPersistConfig = {
@@ -20,3 +32,6 @@ export const persistedCartReducer = persistReducer(
   cartPersistConfig,
   cartSlice.reducer
 );
+
+export const { addProductToCart } = cartSlice.actions;
+export default persistedCartReducer;

@@ -1,7 +1,16 @@
+import { useDispatch } from 'react-redux';
+
 import { Button } from 'shared/components';
 import style from './TotalAndAdd.module.scss';
+import { addProductToCart } from '@redux/cart/cartSlice';
 
-const TotalAndAdd = ({ quantity, price }) => {
+const TotalAndAdd = ({ quantity, price, product }) => {
+  const dispatch = useDispatch();
+
+  const handleAddToCart = () => {
+    dispatch(addProductToCart({ product, quantity }));
+  };
+
   const totalPrice = quantity * price;
 
   return (
@@ -10,7 +19,11 @@ const TotalAndAdd = ({ quantity, price }) => {
         Total Price:{' '}
         <span className={style.price}>{totalPrice.toFixed(2)} UAH</span>
       </h3>
-      <Button title={'Add to Cart'} className={style.btnOrangeStyle} />
+      <Button
+        title={'Add to Cart'}
+        className={style.btnOrangeStyle}
+        onClick={handleAddToCart}
+      />
     </div>
   );
 };

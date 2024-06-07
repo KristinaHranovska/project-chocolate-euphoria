@@ -39,7 +39,7 @@ const DetailInform = ({ product }) => {
         </div>
         <div>
           <DetailedQuantity quantity={quantity} setQuantity={setQuantity} />
-          <TotalAndAdd quantity={quantity} price={price} />
+          <TotalAndAdd quantity={quantity} price={price} product={product} />
         </div>
       </div>
     </div>

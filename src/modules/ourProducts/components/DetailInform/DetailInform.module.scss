@@ -81,25 +81,3 @@
         width: 500px;
     }
 }
-
-
-
-
-
-// .scroll {
-//     background-color: tomato;
-// }
-
-/* Змінюємо колір самого скролу */
-::-webkit-scrollbar {
-    width: 12px;
-    /* ширина самого скролу */
-    background-color: #f7f5ed;
-    /* фон самого скролу */
-}
-
-/* Змінюємо колір бару скролу */
-::-webkit-scrollbar-thumb {
-    background-color: #facf5a;
-    /* колір бару скролу */
-}

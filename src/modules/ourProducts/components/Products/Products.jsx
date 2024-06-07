@@ -3,13 +3,13 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import toast from 'react-hot-toast';
+import clsx from 'clsx';
 import { getProducts } from 'modules/ourProducts/api/productsApi';
+import { Bars } from 'react-loader-spinner';
 
 import style from './Products.module.scss';
 import { icons as sprite } from 'shared/icons';
-import { Bars } from 'react-loader-spinner';
 import { useMedia } from 'hooks/useMedia';
-import clsx from 'clsx';
 import useModal from 'hooks/useModal';
 import { ModalWindow } from 'shared/components';
 import DetailInform from '../DetailInform/DetailInform';

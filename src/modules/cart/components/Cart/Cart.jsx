@@ -2,7 +2,7 @@
 
 import EmptyCart from '../EmptyCart/EmptyCart';
 import { useSelector } from 'react-redux';
-import ProductCart from '../ProductCart/ProductCart';
+import YourCart from '../YourCart/YourCart';
 
 const Cart = ({ closeCartModal }) => {
   const products = useSelector((state) => state.cart.products);
@@ -10,7 +10,7 @@ const Cart = ({ closeCartModal }) => {
   return (
     <>
       {products.length > 0 ? (
-        <ProductCart products={products} closeCartModal={closeCartModal} />
+        <YourCart products={products} closeCartModal={closeCartModal} />
       ) : (
         <EmptyCart closeCartModal={closeCartModal} />
       )}

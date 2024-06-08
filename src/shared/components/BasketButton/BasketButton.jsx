@@ -16,7 +16,9 @@ const BasketButton = () => {
           <use xlinkHref={`${sprite}#basket`} />
         </svg>
 
-        <div className={style.totalQuantity}>{totalQuantity}</div>
+        {totalQuantity > 0 && (
+          <div className={style.totalQuantity}>{totalQuantity}</div>
+        )}
       </div>
 
       <ModalWindow

@@ -55,7 +55,7 @@ const cartSlice = createSlice({
 const cartPersistConfig = {
   key: 'cart',
   storage,
-  whitelist: ['products'],
+  whitelist: ['products', 'totalQuantity'],
 };
 
 export const persistedCartReducer = persistReducer(

@@ -1,0 +1,32 @@
+.yourCart {
+    padding: 0 20px 20px;
+}
+
+.totalInfoPrice {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: end;
+}
+
+.total {
+    @include font(20, 24);
+    font-weight: 600;
+}
+
+.btnOrangeStyle {
+    width: 100%;
+    background-color: $primary-main-color;
+    border-radius: 100px;
+    transition: background-color $animation, color $animation;
+
+    &:hover,
+    &:active {
+        color: $primary-main-color;
+        background-color: $primary-hover-color;
+    }
+
+    @include media(tablet) {
+        width: 165px;
+    }
+}

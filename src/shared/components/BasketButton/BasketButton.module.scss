@@ -32,3 +32,33 @@
         height: 35px;
     }
 }
+
+.totalQuantity {
+    position: absolute;
+    top: 27px;
+    right: 18px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 16px;
+    height: 16px;
+    background-color: $primary-main-color;
+    border-radius: 12px;
+
+    @include font(12, 16);
+    letter-spacing: 0.04em;
+
+    @include media (tablet) {
+        top: 17px;
+        right: -3px;
+    }
+
+    @include media (desktop) {
+        width: 18px;
+        height: 18px;
+        top: 22px;
+
+        @include font(14, 18);
+    }
+}

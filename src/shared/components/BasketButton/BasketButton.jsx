@@ -3,9 +3,11 @@ import style from './BasketButton.module.scss';
 import { ModalWindow } from '..';
 import { Cart } from 'modules/cart';
 import useModal from 'hooks/useModal';
+import { useSelector } from 'react-redux';
 
 const BasketButton = () => {
   const cartModal = useModal();
+  const totalQuantity = useSelector((state) => state.cart.totalQuantity);
 
   return (
     <>
@@ -13,7 +15,10 @@ const BasketButton = () => {
         <svg className={style.basketCartIcon}>
           <use xlinkHref={`${sprite}#basket`} />
         </svg>
+
+        <div className={style.totalQuantity}>{totalQuantity}</div>
       </div>
+
       <ModalWindow
         isOpen={cartModal.isOpen}
         onRequestClose={cartModal.closeModal}

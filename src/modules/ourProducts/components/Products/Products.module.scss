@@ -57,8 +57,7 @@
 }
 
 .productName {
-    @include font(18, 24);
-
+    @include font(16, 22);
     height: 50px;
     font-weight: 600;
     letter-spacing: -0.02em;
@@ -67,6 +66,7 @@
     margin-bottom: 5px;
 
     @include media(tablet) {
+        @include font(18, 24);
         width: 250px;
     }
 }

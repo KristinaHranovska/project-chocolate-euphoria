@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { Field, Formik, ErrorMessage, Form } from 'formik';
 import toast from 'react-hot-toast';
-import useModal from 'hooks/useModal';
+import { useModal } from 'hooks/useModal';
 import { useId } from 'react';
 
 import { Button, ModalWindow } from 'shared/components';

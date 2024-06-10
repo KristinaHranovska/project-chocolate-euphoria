@@ -2,7 +2,7 @@ import { icons as sprite } from 'shared/icons';
 import style from './BasketButton.module.scss';
 import { ModalWindow } from '..';
 import { Cart } from 'modules/cart';
-import useModal from 'hooks/useModal';
+import { useModal } from 'hooks/useModal';
 import { useSelector } from 'react-redux';
 
 const BasketButton = () => {

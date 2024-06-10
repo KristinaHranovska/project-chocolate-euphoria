@@ -10,7 +10,7 @@ import { Bars } from 'react-loader-spinner';
 import style from './Products.module.scss';
 import { icons as sprite } from 'shared/icons';
 import { useMedia } from 'hooks/useMedia';
-import useModal from 'hooks/useModal';
+import { useModal } from 'hooks/useModal';
 import { ModalWindow } from 'shared/components';
 import DetailInform from '../DetailInform/DetailInform';
 

@@ -1,12 +1,14 @@
 .yourCart {
-    padding: 0 20px 20px;
+    padding: 20px 15px;
 }
 
 .totalInfoPrice {
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 10px;
     align-items: end;
+
+    margin-top: 15px;
 }
 
 .total {

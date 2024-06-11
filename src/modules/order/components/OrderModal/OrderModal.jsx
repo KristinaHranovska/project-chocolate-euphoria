@@ -1,22 +1,18 @@
-import { Button } from 'shared/components';
 import style from './OrderModal.module.scss';
-import OrderUserForm from '../OrderUserForm/OrderUserForm';
-import OrderAdressForm from '../OrderAdressForm/OrderAdressForm';
+
 import OrderProducts from '../OrderProducts/OrderProducts';
+import OrderForm from '../OrderForm/OrderForm';
 
 const OrderModal = ({ closeModal }) => {
   return (
-    <>
-      <OrderUserForm />
-      <OrderAdressForm />
-      <OrderProducts />
+    <div className={style.orderModal}>
+      <h2>Complete Your Order</h2>
 
-      <Button
-        title={'Checkout'}
-        className={style.btnOrangeStyle}
-        onClick={() => closeModal()}
-      />
-    </>
+      <div className={style.orderInformation}>
+        <OrderForm closeModal={closeModal} />
+        <OrderProducts closeModal={closeModal} />
+      </div>
+    </div>
   );
 };
 

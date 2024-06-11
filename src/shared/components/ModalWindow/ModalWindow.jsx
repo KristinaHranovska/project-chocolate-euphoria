@@ -5,7 +5,14 @@ import style from './ModalWindow.module.scss';
 
 Modal.setAppElement('#root');
 
-const ModalWindow = ({ isOpen, onRequestClose, title, children, type }) => {
+const ModalWindow = ({
+  isOpen,
+  onRequestClose,
+  title,
+  children,
+  type,
+  shouldCloseOnOverlayClick = true,
+}) => {
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden';
@@ -22,6 +29,7 @@ const ModalWindow = ({ isOpen, onRequestClose, title, children, type }) => {
       isOpen={isOpen}
       onRequestClose={onRequestClose}
       contentLabel={title}
+      shouldCloseOnOverlayClick={shouldCloseOnOverlayClick}
       style={{
         overlay: {
           backgroundColor: 'rgba(0, 0, 0, 0.5)',
@@ -38,7 +46,10 @@ const ModalWindow = ({ isOpen, onRequestClose, title, children, type }) => {
       }}
       closeTimeoutMS={300}
     >
-      <button onClick={onRequestClose} className={style.closeButton}>
+      <button
+        onClick={onRequestClose}
+        className={` ${type === 'order' ? style.closeButtonOrder : style.closeButton}`}
+      >
         <svg
           className={`${style.iconClose} ${type === 'subscribe' ? style.iconCloseSubscribe : style.iconCloseModal}`}
         >

@@ -29,7 +29,8 @@ const YourCart = ({ closeCartModal }) => {
       <ModalWindow
         isOpen={orderModal.isOpen}
         onRequestClose={orderModal.closeModal}
-        title={'Complete Your Order'}
+        type={'order'}
+        shouldCloseOnOverlayClick={false}
       >
         <OrderModal closeModal={closeCartModal} />
       </ModalWindow>

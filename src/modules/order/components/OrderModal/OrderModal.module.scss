@@ -1,16 +1,8 @@
-.btnOrangeStyle {
-    width: 100%;
-    background-color: $primary-main-color;
-    border-radius: 100px;
-    transition: background-color $animation, color $animation;
+.orderModal {
+    padding: 20px;
+}
 
-    &:hover,
-    &:active {
-        color: $primary-main-color;
-        background-color: $primary-hover-color;
-    }
-
-    @include media(tablet) {
-        width: 165px;
-    }
+.orderInformation {
+    display: flex;
+    gap: 35px;
 }

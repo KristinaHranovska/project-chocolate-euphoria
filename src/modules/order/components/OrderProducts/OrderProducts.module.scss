@@ -1,0 +1,12 @@
+.btnBackToBuy {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.backToBuy {
+    width: 28px;
+    height: 28px;
+    fill: transparent;
+    stroke: $primary-black-color;
+}

@@ -11,7 +11,7 @@ import {
 
 const OrderForm = ({ closeModal }) => {
   const handleSubmit = (values, actions) => {
-    console.log(values);
+    // console.log(values);
     actions.resetForm();
   };
 

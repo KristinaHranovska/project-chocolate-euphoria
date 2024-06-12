@@ -6,10 +6,5 @@ export function orderList(productList) {
             total: `${parseFloat(price) * quantity} UAN`
         }
     });
-
-    const totalPrice = order
-        .map(({ total }) => parseFloat(total))
-        .reduce((accumulator, currentValue) => accumulator + currentValue, 0);
-
-    return { ...order, totalPrice };
+    return order;
 }

@@ -245,7 +245,7 @@ const uaCities = [
                 name: "Krasnohorivka"
             },
             {
-                name: "Krasnyi Lyman"
+                name: "Lyman"
             },
             {
                 name: "Kurakhove"

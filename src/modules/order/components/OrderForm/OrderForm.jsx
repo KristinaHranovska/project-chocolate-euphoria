@@ -23,6 +23,7 @@ const OrderForm = ({ closeModal }) => {
 
     actions.resetForm();
     // dispatch(removeAllProducts());
+    closeModal();
   };
 
   return (
@@ -40,7 +41,6 @@ const OrderForm = ({ closeModal }) => {
             type="submit"
             title={'Checkout'}
             className={style.btnOrangeStyle}
-            onClick={() => closeModal()}
           />
         </Form>
       </Formik>

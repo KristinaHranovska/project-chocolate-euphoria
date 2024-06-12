@@ -1,6 +1,8 @@
-import { Field, useFormikContext } from 'formik';
+import { Field, useFormikContext, ErrorMessage } from 'formik';
 import { useState, useEffect } from 'react';
 import uaCities from 'shared/data/uaCities';
+
+import style from './OrderAdressForm.module.scss';
 
 const OrderAdressForm = () => {
   const { values } = useFormikContext();
@@ -31,6 +33,7 @@ const OrderAdressForm = () => {
   return (
     <>
       <h3>Enter the delivery address:</h3>
+
       <Field as="select" name="selectRegion">
         <option value="">Choose a region</option>
         {regionOptions.map((option) => (
@@ -48,12 +51,20 @@ const OrderAdressForm = () => {
           </option>
         ))}
       </Field>
-      <Field
-        as="textarea"
-        name="comment"
-        maxLength="150"
-        placeholder="Enter your comment"
-      />
+
+      <div>
+        <Field
+          as="textarea"
+          name="comment"
+          maxLength="150"
+          placeholder="Enter your comment"
+        />
+        <ErrorMessage
+          className={style.errorSpan}
+          name="comment"
+          component="span"
+        />
+      </div>
     </>
   );
 };

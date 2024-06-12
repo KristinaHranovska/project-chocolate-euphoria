@@ -15,23 +15,17 @@ export const contactFormValidationSchema = Yup.object().shape({
             valueNumber,
             "Invalid phone number format (xx-xxx-xxxx)"
         ),
-    //   deliveryType: Yup.string().required(),
-    //   location: Yup.object().required(),
-    //   address: Yup.string().max(300).required(),
-    //   comment: Yup.string()
-    //     .max(300, 'Максимальна довжина тексту - 300 символів')
-    //     .matches(
-    //       /^[а-яА-ЯґҐєЄіІїЇ0-9 .,-/"()!?]+$/,
-    //       'Коментар може містити лише символи кирилиці, цифри та знаки .,!?/-"():;'
-    //     ),
+    comment: Yup.string()
+        .max(300, 'The maximum text length is 300 characters')
+        .matches(
+            /^[a-zA-Z0-9 .,-/"()!?]+$/,
+            'A comment can only contain Latin characters, numbers, and symbols .,!?/-"():;'
+        ),
 });
 
 export const orderFormInitialValues = {
     firstName: '',
     lastName: '',
     phone: '',
-    // deliveryType: '',
-    // location: '',
-    // address: '',
-    // comment: '',
+    comment: '',
 };

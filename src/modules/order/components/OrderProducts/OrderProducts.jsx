@@ -11,6 +11,7 @@ const OrderProducts = ({ closeModal }) => {
     (acc, item) => acc + parseFloat(item.product.price) * item.quantity,
     0
   );
+
   const handleBuyNowClick = () => {
     scrollToElementById('ourProducts');
   };

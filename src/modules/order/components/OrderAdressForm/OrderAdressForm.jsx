@@ -1,18 +1,16 @@
-import { FastField } from 'formik';
-
-import { useState } from 'react';
-import CreatableSelect from 'react-select/creatable';
+import { Field, useFormikContext } from 'formik';
+import { useState, useEffect } from 'react';
 import uaCities from 'shared/data/uaCities';
 
 const OrderAdressForm = () => {
-  const [selectedRegion, setSelectedRegion] = useState(null);
+  const { values } = useFormikContext();
+
   const [cities, setCities] = useState([]);
 
-  const handleRegionChange = (selectedOption) => {
-    setSelectedRegion(selectedOption);
-    if (selectedOption) {
+  useEffect(() => {
+    if (values.selectRegion) {
       const selectedRegionCities =
-        uaCities.find((region) => region.name === selectedOption.value)
+        uaCities.find((region) => region.name === values.selectRegion)
           ?.cities || [];
       setCities(
         selectedRegionCities.map((city) => ({
@@ -23,7 +21,7 @@ const OrderAdressForm = () => {
     } else {
       setCities([]);
     }
-  };
+  }, [values.selectRegion]);
 
   const regionOptions = uaCities.map((region) => ({
     value: region.name,
@@ -33,24 +31,29 @@ const OrderAdressForm = () => {
   return (
     <>
       <h3>Enter the delivery address:</h3>
-      <FastField name="selectRegion">
-        <CreatableSelect
-          isClearable
-          placeholder="Choose a region"
-          options={regionOptions}
-          onChange={handleRegionChange}
-        />
-      </FastField>
+      <Field as="select" name="selectRegion">
+        <option value="">Choose a region</option>
+        {regionOptions.map((option) => (
+          <option key={option.value} value={option.value}>
+            {option.label}
+          </option>
+        ))}
+      </Field>
 
-      {selectedRegion && (
-        <FastField name="selectCity">
-          <CreatableSelect
-            isClearable
-            placeholder="Choose a city"
-            options={cities}
-          />
-        </FastField>
-      )}
+      <Field as="select" name="selectCity">
+        <option value="">Choose a city</option>
+        {cities.map((city) => (
+          <option key={city.value} value={city.value}>
+            {city.label}
+          </option>
+        ))}
+      </Field>
+      <Field
+        as="textarea"
+        name="comment"
+        maxLength="150"
+        placeholder="Enter your comment"
+      />
     </>
   );
 };

@@ -8,11 +8,21 @@ import {
   contactFormValidationSchema,
   orderFormInitialValues,
 } from 'modules/order/helpers';
+// import { useDispatch, useSelector } from 'react-redux';
+// import { orderList } from 'modules/order/helpers/orderList';
+// import { removeAllProducts } from '@redux/cart/cartSlice';
 
 const OrderForm = ({ closeModal }) => {
+  // const products = useSelector((state) => state.cart.products);
+  // const dispatch = useDispatch();
+
   const handleSubmit = (values, actions) => {
-    // console.log(values);
+    // const order = orderList(products);
+    // const message = { values, order };
+    // console.log(message);
+
     actions.resetForm();
+    // dispatch(removeAllProducts());
   };
 
   return (

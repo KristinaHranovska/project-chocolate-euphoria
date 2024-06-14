@@ -31,36 +31,40 @@ const OrderProducts = ({ closeModal }) => {
         Return to shopping
       </button>
 
-      <CustomScrollWrapper>
-        <ul className={style.productCartList}>
-          {products.map((item) => {
-            const productTotalPrice =
-              parseFloat(item.product.price) * item.quantity;
-            return (
-              <li className={style.productCartItem} key={item.product._id}>
-                <div className={style.productCartStyle}>
-                  <img
-                    className={style.productCartPhoto}
-                    src={item.product.photo}
-                    alt={item.product.productName}
-                  />
-                  <div className={style.productCartInfo}>
-                    <h3 className={style.productCartName}>
-                      {item.product.productName}
-                    </h3>
-                    <div className={style.quantity}>
-                      <p className={style.quantityValue}>{item.quantity}</p>
+      <div className={style.yourOrder}>
+        <h3 className={style.titleOrder}>Your order:</h3>
+        <div className={style.thumbOrder}>
+          <CustomScrollWrapper>
+            <ul className={style.productCartList}>
+              {products.map((item) => {
+                const productTotalPrice =
+                  parseFloat(item.product.price) * item.quantity;
+                return (
+                  <li className={style.productCartItem} key={item.product._id}>
+                    <img
+                      className={style.productCartPhoto}
+                      src={item.product.photo}
+                      alt={item.product.productName}
+                    />
+                    <div className={style.productOrderInfo}>
+                      <h3 className={style.productOrder}>
+                        {item.product.productName}
+                      </h3>
+                      <p className={style.productOrder}>x{item.quantity}</p>
+                      <p className={style.totalOrderPrice}>
+                        {productTotalPrice.toFixed(2)} UAH
+                      </p>
                     </div>
-
-                    <p>Total: {productTotalPrice.toFixed(2)} UAH</p>
-                  </div>
-                </div>
-              </li>
-            );
-          })}
-        </ul>
-      </CustomScrollWrapper>
-      <p className={style.total}>Total Price: {totalPrice.toFixed(2)} UAH</p>
+                  </li>
+                );
+              })}
+            </ul>
+          </CustomScrollWrapper>
+        </div>
+        <p className={style.totalOrder}>
+          Total Price <span>{totalPrice.toFixed(2)} UAH</span>
+        </p>
+      </div>
     </div>
   );
 };

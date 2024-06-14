@@ -1,8 +1,18 @@
 .orderModal {
+    background-color: $primary-white-color;
     padding: 20px;
+}
+
+.orderTitle {
+    @include font(28, 30);
+    font-weight: 600;
+    letter-spacing: 0.02em;
+
+    margin-bottom: 24px;
 }
 
 .orderInformation {
     display: flex;
-    gap: 35px;
+    flex-direction: column-reverse;
+    gap: 32px;
 }

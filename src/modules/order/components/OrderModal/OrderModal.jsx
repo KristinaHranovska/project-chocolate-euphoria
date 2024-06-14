@@ -6,7 +6,7 @@ import OrderForm from '../OrderForm/OrderForm';
 const OrderModal = ({ closeModal }) => {
   return (
     <div className={style.orderModal}>
-      <h2>Complete Your Order</h2>
+      <h2 className={style.orderTitle}>Complete Your Order</h2>
 
       <div className={style.orderInformation}>
         <OrderForm closeModal={closeModal} />

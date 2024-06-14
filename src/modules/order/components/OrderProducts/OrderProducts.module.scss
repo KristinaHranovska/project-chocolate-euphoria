@@ -2,11 +2,85 @@
     display: flex;
     align-items: center;
     gap: 10px;
+    @include font(16, 24);
+    letter-spacing: 0.04em;
+
+    margin-left: auto;
+    margin-bottom: 15px;
 }
 
 .backToBuy {
-    width: 28px;
-    height: 28px;
+    width: 24px;
+    height: 24px;
     fill: transparent;
     stroke: $primary-black-color;
+}
+
+.yourOrder {
+    background-color: $primary-modal-color;
+    border-radius: 24px;
+    padding: 20px 16px;
+}
+
+.titleOrder {
+    @include font(18, 28);
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    margin-bottom: 15px;
+}
+
+.thumbOrder {
+    margin-bottom: 20px;
+}
+
+.productCartList {
+    height: 344px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+}
+
+.productCartItem {
+    display: flex;
+    gap: 10px;
+}
+
+.productCartPhoto {
+    width: 100px;
+    border-radius: 20px;
+}
+
+.productOrderInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 5px;
+}
+
+.productOrder {
+    @include font(16, 24);
+    font-weight: 400;
+    letter-spacing: 0.04em;
+}
+
+
+.totalOrderPrice {
+    @include font(16, 24);
+    font-weight: 600;
+    letter-spacing: 0.04em;
+}
+
+.totalOrder {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include font(16, 24);
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    border-top: 1px solid $primary-darkgrey-color;
+
+    padding-top: 22px;
+    margin-left: auto;
 }

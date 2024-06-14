@@ -24,7 +24,6 @@ const BasketButton = () => {
       <ModalWindow
         isOpen={cartModal.isOpen}
         onRequestClose={cartModal.closeModal}
-        title={'Your shopping cart'}
       >
         <Cart closeCartModal={cartModal.closeModal} />
       </ModalWindow>

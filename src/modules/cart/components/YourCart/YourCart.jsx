@@ -16,6 +16,7 @@ const YourCart = ({ closeCartModal }) => {
 
   return (
     <div className={style.yourCart}>
+      <h2 className={style.mainTitleCart}>Your shopping cart</h2>
       <ProductCart />
       <div className={style.totalInfoPrice}>
         <p className={style.total}>Total Price: {totalPrice.toFixed(2)} UAH</p>

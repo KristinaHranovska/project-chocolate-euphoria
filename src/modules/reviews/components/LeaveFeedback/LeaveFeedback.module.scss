@@ -106,7 +106,7 @@
 .formInput:not(:placeholder-shown)+.formLabel {
     top: -7px;
     font-size: 12px;
-    background-color: #dddddd;
+    background-color: $primary-white-color;
     padding: 0 5px;
     color: $primary-main-color;
 

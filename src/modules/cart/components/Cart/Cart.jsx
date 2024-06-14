@@ -1,5 +1,3 @@
-// import style from './Cart.module.scss';
-
 import EmptyCart from '../EmptyCart/EmptyCart';
 import { useSelector } from 'react-redux';
 import YourCart from '../YourCart/YourCart';

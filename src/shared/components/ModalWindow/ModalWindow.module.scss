@@ -1,7 +1,13 @@
 .closeButton {
     position: absolute;
-    top: 24px;
-    right: 24px;
+    top: 10px;
+    right: 15px;
+
+    @include media(tablet) {
+        top: 15px;
+    }
+
+
 }
 
 .iconClose {
@@ -16,10 +22,20 @@
 
 .iconCloseSubscribe {
     stroke: $primary-white-color;
+
+    &:active,
+    &:hover {
+        stroke: $primary-main-color;
+    }
 }
 
 .iconCloseModal {
     stroke: $primary-text-color;
+
+    &:active,
+    &:hover {
+        stroke: $primary-main-color;
+    }
 }
 
 .cartTitle {
@@ -42,7 +58,7 @@
 
     opacity: 0;
     background-color: $primary-white-color;
-    border-radius: 10px;
+    border-radius: 24px;
 
     z-index: 15;
     transition: opacity $animation, transform $animation;

@@ -11,13 +11,7 @@ const BasketButton = () => {
 
   return (
     <>
-      <div
-        data-aos="zoom-in"
-        data-aos-easing="linear"
-        data-aos-duration="500"
-        className={style.iconThumb}
-        onClick={cartModal.openModal}
-      >
+      <div className={style.iconThumb} onClick={cartModal.openModal}>
         <svg className={style.basketCartIcon}>
           <use xlinkHref={`${sprite}#basket`} />
         </svg>
@@ -31,7 +25,7 @@ const BasketButton = () => {
         isOpen={cartModal.isOpen}
         onRequestClose={cartModal.closeModal}
       >
-        <Cart closeCartModal={cartModal.closeModal} />
+        <Cart closeCartModal={cartModal.closeModal} isOpen={cartModal.isOpen} />
       </ModalWindow>
     </>
   );

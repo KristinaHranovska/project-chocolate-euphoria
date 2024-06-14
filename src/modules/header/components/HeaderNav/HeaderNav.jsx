@@ -12,7 +12,7 @@ const HeaderNav = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scroll, setScroll] = useState(false);
   const overlayMenuRef = useRef(null);
-  const { isMobile } = useMedia();
+  const { isMobile, isTablet, isDesktop } = useMedia();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -41,12 +41,20 @@ const HeaderNav = () => {
   }, []);
 
   return (
-    <div data-aos="zoom-in" data-aos-easing="linear" data-aos-duration="500">
-      <div className={clsx({ [style.headerContainer]: scroll })}>
-        <NavList className={style.navList}>
-          <Logo className={style.logo} />
-        </NavList>
-      </div>
+    <>
+      {(isDesktop || isTablet) && (
+        <div
+          data-aos="zoom-in"
+          data-aos-easing="linear"
+          data-aos-duration="500"
+        >
+          <div className={clsx({ [style.headerContainer]: scroll })}>
+            <NavList className={style.navList}>
+              <Logo className={style.logo} />
+            </NavList>
+          </div>
+        </div>
+      )}
 
       {isMobile && (
         <>
@@ -90,7 +98,7 @@ const HeaderNav = () => {
           </CSSTransition>
         </>
       )}
-    </div>
+    </>
   );
 };
 

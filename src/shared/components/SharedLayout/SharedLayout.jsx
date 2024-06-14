@@ -1,21 +1,18 @@
-// import { Cart } from 'modules/cart';
 import { Footer } from 'modules/footer';
 import { Header } from 'modules/header';
 import { ArrowUp } from '..';
 import { useMediaQuery } from 'react-responsive';
-import { Toaster } from 'react-hot-toast';
+import style from './SharedLayout.module.scss';
 
 const SharedLayout = ({ children }) => {
   const isDesktop = useMediaQuery({ query: '(min-width: 1440px)' });
   return (
-    <>
+    <div className={style.oveflow}>
       <Header />
       {children}
       <Footer />
-      {/* <Cart /> */}
       {isDesktop && <ArrowUp />}
-      <Toaster position="top-right" reverseOrder={true} />
-    </>
+    </div>
   );
 };
 

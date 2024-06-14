@@ -5,14 +5,26 @@ import { Button, ModalWindow } from 'shared/components';
 import style from './YourCart.module.scss';
 import { useModal } from 'hooks/useModal';
 import OrderModal from 'modules/order/components/OrderModal/OrderModal';
+import { useEffect } from 'react';
 
-const YourCart = ({ closeCartModal }) => {
+const YourCart = ({ closeCartModal, isOpen }) => {
   const orderModal = useModal(true);
   const products = useSelector((state) => state.cart.products);
   const totalPrice = products.reduce(
     (acc, item) => acc + parseFloat(item.product.price) * item.quantity,
     0
   );
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isOpen]);
 
   return (
     <div className={style.yourCart}>

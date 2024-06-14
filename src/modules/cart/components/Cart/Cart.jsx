@@ -2,13 +2,13 @@ import EmptyCart from '../EmptyCart/EmptyCart';
 import { useSelector } from 'react-redux';
 import YourCart from '../YourCart/YourCart';
 
-const Cart = ({ closeCartModal }) => {
+const Cart = ({ closeCartModal, isOpen }) => {
   const products = useSelector((state) => state.cart.products);
 
   return (
     <>
       {products.length > 0 ? (
-        <YourCart products={products} closeCartModal={closeCartModal} />
+        <YourCart closeCartModal={closeCartModal} isOpen={isOpen} />
       ) : (
         <EmptyCart closeCartModal={closeCartModal} />
       )}

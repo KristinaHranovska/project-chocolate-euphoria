@@ -79,12 +79,7 @@ const LeaveFeedback = () => {
           />
         </picture>
 
-        <div
-          data-aos="zoom-in"
-          data-aos-easing="linear"
-          data-aos-duration="400"
-          className={style.formReview}
-        >
+        <div className={style.formReview}>
           <h2 className={style.reviewTitle}>
             Leave a review about{' '}
             <span className={style.accentMainTitle}>our chocolate</span>

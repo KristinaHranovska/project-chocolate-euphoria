@@ -1,4 +1,7 @@
-.error {
-    color: red;
-    font-size: 12px;
+.titleContacts {
+    @include font(18, 25);
+    font-weight: 600;
+    letter-spacing: 0.02em;
+
+    margin-bottom: 15px;
 }

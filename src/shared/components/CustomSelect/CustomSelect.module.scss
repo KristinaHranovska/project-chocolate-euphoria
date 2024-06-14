@@ -1,0 +1,56 @@
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    margin-bottom: 15px;
+}
+
+.selectWrapper {
+    position: relative;
+}
+
+.formLabel {
+    @include font(16, 24);
+    letter-spacing: 0.04em;
+}
+
+.formSelect {
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid $primary-input-color;
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.03);
+    background-color: $primary-modal-color;
+    outline: transparent;
+    color: $primary-main-color;
+    appearance: none;
+
+    transition: border-color $animation;
+    padding: 13px 18px;
+
+    &:focus,
+    &:hover {
+        border: 1px solid $primary-main-color;
+    }
+
+    @include media(tablet) {
+        padding: 22px 24px;
+        font-size: 18px;
+    }
+
+    &.error {
+        border-color: $error-input-color;
+    }
+}
+
+.iconArrow {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+
+    width: 24px;
+    height: 24px;
+    pointer-events: none;
+    fill: transparent;
+    stroke: $primary-text-color;
+}

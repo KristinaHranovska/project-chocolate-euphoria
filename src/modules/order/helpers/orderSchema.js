@@ -1,3 +1,4 @@
+import { formatRegex } from 'modules/footer/helper/constants';
 import { valueNumber } from 'modules/reviews/helpers';
 import * as Yup from 'yup';
 
@@ -15,6 +16,12 @@ export const contactFormValidationSchema = Yup.object().shape({
             valueNumber,
             "Invalid phone number format (xx-xxx-xxxx)"
         ),
+    email: Yup.string()
+        .matches(
+            formatRegex,
+            "Invalid email format"
+        )
+        .required("Required"),
     comment: Yup.string()
         .max(300, 'The maximum text length is 300 characters')
         .matches(
@@ -27,5 +34,6 @@ export const orderFormInitialValues = {
     firstName: '',
     lastName: '',
     phone: '',
+    email: '',
     comment: '',
 };

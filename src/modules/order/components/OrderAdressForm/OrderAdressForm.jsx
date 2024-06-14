@@ -1,29 +1,32 @@
-import { Field, useFormikContext, ErrorMessage } from 'formik';
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
+import { useFormikContext } from 'formik';
 import uaCities from 'shared/data/uaCities';
-
 import style from './OrderAdressForm.module.scss';
+import CustomSelect from 'shared/components/CustomSelect/CustomSelect';
+import CustomTextarea from 'shared/components/CustomTextarea/CustomTextarea';
 
 const OrderAdressForm = () => {
-  const { values } = useFormikContext();
-
+  const { values, setFieldValue } = useFormikContext();
   const [cities, setCities] = useState([]);
 
   useEffect(() => {
     if (values.selectRegion) {
-      const selectedRegionCities =
-        uaCities.find((region) => region.name === values.selectRegion)
-          ?.cities || [];
-      setCities(
-        selectedRegionCities.map((city) => ({
-          value: city.name,
-          label: city.name,
-        }))
+      const selectedRegion = uaCities.find(
+        (region) => region.name === values.selectRegion
       );
+      const selectedRegionCities = selectedRegion
+        ? selectedRegion.cities.map((city) => ({
+            value: city.name,
+            label: city.name,
+          }))
+        : [];
+      setCities(selectedRegionCities);
+      setFieldValue('selectCity', '');
     } else {
       setCities([]);
+      setFieldValue('selectCity', '');
     }
-  }, [values.selectRegion]);
+  }, [values.selectRegion, setFieldValue]);
 
   const regionOptions = uaCities.map((region) => ({
     value: region.name,
@@ -32,39 +35,27 @@ const OrderAdressForm = () => {
 
   return (
     <>
-      <h3>Enter the delivery address:</h3>
+      <h3 className={style.titleDelivery}>Enter the delivery address:</h3>
 
-      <Field as="select" name="selectRegion">
-        <option value="">Choose a region</option>
-        {regionOptions.map((option) => (
-          <option key={option.value} value={option.value}>
-            {option.label}
-          </option>
-        ))}
-      </Field>
+      <CustomSelect
+        label="Choose a region"
+        name="selectRegion"
+        options={regionOptions}
+      />
 
-      <Field as="select" name="selectCity">
-        <option value="">Choose a city</option>
-        {cities.map((city) => (
-          <option key={city.value} value={city.value}>
-            {city.label}
-          </option>
-        ))}
-      </Field>
+      <CustomSelect
+        label="Choose a city"
+        name="selectCity"
+        options={cities}
+        isDisabled={!values.selectRegion}
+      />
 
-      <div>
-        <Field
-          as="textarea"
-          name="comment"
-          maxLength="150"
-          placeholder="Enter your comment"
-        />
-        <ErrorMessage
-          className={style.errorSpan}
-          name="comment"
-          component="span"
-        />
-      </div>
+      <CustomTextarea
+        label="Enter your comment"
+        name="comment"
+        maxLength="150"
+        placeholder="Enter your comment"
+      />
     </>
   );
 };

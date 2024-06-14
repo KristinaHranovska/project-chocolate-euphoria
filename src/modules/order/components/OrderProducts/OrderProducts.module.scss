@@ -20,6 +20,10 @@
     background-color: $primary-modal-color;
     border-radius: 24px;
     padding: 20px 16px;
+
+    @include media(tablet) {
+        padding: 32px;
+    }
 }
 
 .titleOrder {
@@ -27,10 +31,20 @@
     font-weight: 600;
     letter-spacing: 0.02em;
     margin-bottom: 15px;
+
+    @include media(tablet) {
+        @include font(20, 28);
+
+        margin-bottom: 20px;
+    }
 }
 
 .thumbOrder {
     margin-bottom: 20px;
+
+    @include media(tablet) {
+        margin-bottom: 32px;
+    }
 }
 
 .productCartList {
@@ -40,16 +54,28 @@
     flex-direction: column;
     gap: 16px;
 
+    @include media(tablet) {
+        height: 370px;
+    }
+
 }
 
 .productCartItem {
     display: flex;
     gap: 10px;
+
+    @include media(tablet) {
+        gap: 16px;
+    }
 }
 
 .productCartPhoto {
     width: 100px;
     border-radius: 20px;
+
+    @include media(tablet) {
+        width: 120px;
+    }
 }
 
 .productOrderInfo {
@@ -57,6 +83,11 @@
     flex-direction: column;
     justify-content: space-between;
     padding-left: 5px;
+
+    @include media(tablet) {
+        justify-content: center;
+        gap: 8px;
+    }
 }
 
 .productOrder {
@@ -83,4 +114,9 @@
 
     padding-top: 22px;
     margin-left: auto;
+
+    @include media(tablet) {
+        @include font(20, 24);
+        padding-top: 24px;
+    }
 }

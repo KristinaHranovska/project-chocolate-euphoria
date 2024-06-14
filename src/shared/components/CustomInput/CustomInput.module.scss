@@ -37,7 +37,7 @@
         border: 1px solid $primary-main-color;
     }
 
-    @include media(tablet) {
+    @include media(desktop) {
         padding: 22px 24px;
         font-size: 18px;
     }

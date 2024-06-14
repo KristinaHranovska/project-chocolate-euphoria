@@ -10,7 +10,7 @@
         background-color: $primary-hover-color;
     }
 
-    @include media(tablet) {
+    @include media(desktop) {
         width: 165px;
     }
 }

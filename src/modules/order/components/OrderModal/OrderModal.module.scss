@@ -1,5 +1,6 @@
 .orderModal {
-    background-color: $primary-white-color;
+    width: 100vw;
+    height: 100vh;
     padding: 20px;
 }
 
@@ -9,6 +10,10 @@
     letter-spacing: 0.02em;
 
     margin-bottom: 24px;
+
+    @include media(tablet) {
+        @include font(40, 40);
+    }
 }
 
 .orderInformation {

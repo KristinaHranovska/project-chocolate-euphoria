@@ -4,4 +4,10 @@
     letter-spacing: 0.02em;
 
     margin-bottom: 15px;
+
+    @include media(tablet) {
+        @include font(20, 28);
+
+        margin-bottom: 20px;
+    }
 }

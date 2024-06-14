@@ -1,15 +1,16 @@
 .heroInform {
-    position: relative;
-    top: 70vh;
+    position: absolute;
     left: 40px;
+    bottom: 28px;
 
     @include media(tablet) {
         left: 60px;
+        bottom: 81px;
     }
 
     @include media(desktop) {
         left: 72px;
-        top: 40vh;
+        bottom: 40px;
     }
 }
 

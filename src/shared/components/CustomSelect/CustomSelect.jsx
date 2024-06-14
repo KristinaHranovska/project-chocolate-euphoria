@@ -1,10 +1,9 @@
-import { useField, useFormikContext } from 'formik';
+import { useFormikContext } from 'formik';
 import Select from 'react-select';
 import style from './CustomSelect.module.scss';
 import customStyles from 'helpers/customStyles';
 
 const CustomSelect = ({ label, options, isDisabled, ...props }) => {
-  const [meta] = useField(props);
   const { setFieldValue } = useFormikContext();
 
   const handleChange = (selectedOption) => {
@@ -21,12 +20,10 @@ const CustomSelect = ({ label, options, isDisabled, ...props }) => {
         options={options}
         onChange={handleChange}
         styles={customStyles}
-        placeholder={`Choose ${label.toLowerCase()}`}
+        placeholder={label}
         isDisabled={isDisabled}
+        isClearable
       />
-      {meta.touched && meta.error ? (
-        <div className={style.error}>{meta.error}</div>
-      ) : null}
     </div>
   );
 };

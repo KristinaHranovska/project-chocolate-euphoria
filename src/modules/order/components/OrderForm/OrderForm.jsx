@@ -48,7 +48,7 @@ const OrderForm = ({ closeModal }) => {
         validationSchema={contactFormValidationSchema}
         onSubmit={handleSubmit}
       >
-        <Form>
+        <Form className={style.formOrder}>
           <OrderUserForm />
           <OrderAdressForm />
 

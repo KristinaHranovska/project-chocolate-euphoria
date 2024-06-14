@@ -1,3 +1,9 @@
+.formOrder {
+    @include media(desktop) {
+        width: 600px;
+    }
+}
+
 .btnOrangeStyle {
     width: 100%;
     background-color: $primary-main-color;
@@ -11,6 +17,9 @@
     }
 
     @include media(desktop) {
-        width: 165px;
+        @include font(18, 26);
+        margin-bottom: 20px;
+        letter-spacing: 0.04em;
+        padding: 15px 0;
     }
 }

@@ -34,6 +34,10 @@
     @include media(tablet) {
         padding: 32px;
     }
+
+    @include media(desktop) {
+        width: 700px;
+    }
 }
 
 .titleOrder {

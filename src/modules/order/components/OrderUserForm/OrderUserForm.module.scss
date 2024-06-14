@@ -10,4 +10,10 @@
 
         margin-bottom: 20px;
     }
+
+    @include media(desktop) {
+        @include font(24, 28);
+
+        margin-bottom: 10px;
+    }
 }

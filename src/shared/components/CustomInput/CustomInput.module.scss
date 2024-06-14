@@ -4,11 +4,20 @@
     gap: 8px;
 
     margin-bottom: 15px;
+
+    @include media(desktop) {
+        gap: 10px;
+        margin-bottom: 20px;
+    }
 }
 
 .formLabel {
     @include font(16, 24);
     letter-spacing: 0.04em;
+
+    @include media(desktop) {
+        @include font(18, 26);
+    }
 }
 
 .spanRequired {
@@ -16,6 +25,7 @@
 }
 
 .formInput {
+    @include font(16, 24);
     width: 100%;
     border-radius: 8px;
     border: 1px solid $primary-input-color;
@@ -38,8 +48,8 @@
     }
 
     @include media(desktop) {
-        padding: 22px 24px;
-        font-size: 18px;
+        @include font(18, 26);
+        padding: 15px 20px;
     }
 
     &.error {
@@ -50,6 +60,10 @@
 .errorSpan {
     color: $error-input-color;
     font-size: 12px;
+
+    @include media(desktop) {
+        @include font(14, 18);
+    }
 }
 
 .formInput:-webkit-autofill,

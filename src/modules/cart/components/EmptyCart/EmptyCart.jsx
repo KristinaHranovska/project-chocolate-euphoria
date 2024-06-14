@@ -11,6 +11,7 @@ const EmptyCart = ({ closeCartModal }) => {
 
   return (
     <div className={style.emptyCart}>
+      <h2 className={style.mainTitleCart}>Your shopping cart</h2>
       <div className={style.imgCart}></div>
       <div className={style.wrapperInform}>
         <h3 className={style.cartTitle}>The basket is empty</h3>

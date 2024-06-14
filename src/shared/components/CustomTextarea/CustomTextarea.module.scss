@@ -3,6 +3,7 @@
 }
 
 .formInput {
+    @include font(16, 24);
     width: 100%;
     border-radius: 8px;
     border: 1px solid $primary-input-color;
@@ -26,8 +27,8 @@
     }
 
     @include media(desktop) {
-        padding: 22px 24px;
-        font-size: 18px;
+        @include font(18, 26);
+        padding: 15px 20px;
     }
 
     &.error {
@@ -42,9 +43,17 @@
     @include media(tablet) {
         height: 137px;
     }
+
+    @include media(desktop) {
+        height: 108px;
+    }
 }
 
 .errorSpan {
     color: $error-input-color;
     font-size: 12px;
+
+    @include media(desktop) {
+        @include font(14, 18);
+    }
 }

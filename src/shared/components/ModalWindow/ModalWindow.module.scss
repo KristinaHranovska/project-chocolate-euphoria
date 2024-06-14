@@ -6,8 +6,6 @@
     @include media(tablet) {
         top: 15px;
     }
-
-
 }
 
 .iconClose {
@@ -22,6 +20,7 @@
 
 .iconCloseSubscribe {
     stroke: $primary-white-color;
+    transition: stroke $animation;
 
     &:active,
     &:hover {
@@ -31,6 +30,7 @@
 
 .iconCloseModal {
     stroke: $primary-text-color;
+    transition: stroke $animation;
 
     &:active,
     &:hover {

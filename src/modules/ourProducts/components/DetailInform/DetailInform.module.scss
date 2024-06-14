@@ -1,7 +1,7 @@
 .detailInfrom {
     background-color: $primary-modal-color;
     border-radius: 24px;
-    padding: 40px 15px 30px;
+    padding: 40px 10px 30px;
 
     @include media(tablet) {
         padding: 45px 30px 30px;
@@ -14,8 +14,9 @@
 }
 
 .detailImage {
+    display: block;
     border-radius: 24px;
-    width: 335px;
+    width: 340px;
     margin-bottom: 20px;
 
     @include media(tablet) {
@@ -23,7 +24,7 @@
     }
 
     @include media(desktop) {
-        width: 520px;
+        width: 590px;
         margin-bottom: 0;
     }
 }

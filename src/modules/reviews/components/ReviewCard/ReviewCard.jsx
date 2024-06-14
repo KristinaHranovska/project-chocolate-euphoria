@@ -30,7 +30,7 @@ const ReviewCard = () => {
   }, []);
 
   return (
-    <>
+    <div data-aos="zoom-in" data-aos-easing="linear" data-aos-duration="1000">
       {loading ? (
         <div className={style.containerLoader}>
           <Bars
@@ -100,7 +100,7 @@ const ReviewCard = () => {
           </button>
         </div>
       )}
-    </>
+    </div>
   );
 };
 

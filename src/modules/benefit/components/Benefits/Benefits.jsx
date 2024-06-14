@@ -23,7 +23,13 @@ const Benefits = () => {
         <Container>
           <ul className={style.benefitsList}>
             {benefits.map((benefit, index) => (
-              <li key={index} className={style.benefitsItem}>
+              <li
+                data-aos="zoom-in-down"
+                data-aos-easing="linear"
+                data-aos-duration="700"
+                key={index}
+                className={style.benefitsItem}
+              >
                 <div className={style.thumbBenefits}>
                   <svg className={style.benefitsIcons}>
                     <use xlinkHref={`${sprite}#${benefit.icon}`} />

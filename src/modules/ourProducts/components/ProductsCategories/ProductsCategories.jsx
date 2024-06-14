@@ -8,7 +8,12 @@ const ProductsCategories = ({
 }) => {
   return (
     <>
-      <ul className={style.categoriesList}>
+      <ul
+        data-aos="fade-down"
+        data-aos-easing="linear"
+        data-aos-duration="1000"
+        className={style.categoriesList}
+      >
         {categoriseList.length > 0 &&
           categoriseList.map((category) => (
             <li

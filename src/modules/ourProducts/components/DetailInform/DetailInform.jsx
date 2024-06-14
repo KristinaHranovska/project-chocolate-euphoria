@@ -14,12 +14,20 @@ const DetailInform = ({ product, closeModal }) => {
   return (
     <div className={style.detailInfrom}>
       <img
+        data-aos="zoom-in"
+        data-aos-easing="linear"
+        data-aos-duration="500"
         className={style.detailImage}
         src={product.photo}
         alt={product.productName}
       />
 
-      <div className={style.detailInfromAboutProduct}>
+      <div
+        data-aos="zoom-in"
+        data-aos-easing="linear"
+        data-aos-duration="500"
+        className={style.detailInfromAboutProduct}
+      >
         <div>
           <h2 className={style.detailTitle}>{product.productName}</h2>
           <p className={style.detailCategory}>{product.category}</p>

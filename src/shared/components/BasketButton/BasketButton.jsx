@@ -11,7 +11,13 @@ const BasketButton = () => {
 
   return (
     <>
-      <div className={style.iconThumb} onClick={cartModal.openModal}>
+      <div
+        data-aos="zoom-in"
+        data-aos-easing="linear"
+        data-aos-duration="500"
+        className={style.iconThumb}
+        onClick={cartModal.openModal}
+      >
         <svg className={style.basketCartIcon}>
           <use xlinkHref={`${sprite}#basket`} />
         </svg>

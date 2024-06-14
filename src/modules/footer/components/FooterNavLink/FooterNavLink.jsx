@@ -4,7 +4,12 @@ import { Logo, SocialMedia } from 'shared/components';
 
 const FooterNavLink = () => {
   return (
-    <div className={style.footerLinkThumb}>
+    <div
+      data-aos="fade-up"
+      data-aos-anchor-placement="top-bottom"
+      data-aos-duration="2000"
+      className={style.footerLinkThumb}
+    >
       <NavList
         className={style.footerList}
         listItemClass={style.footerListItem}

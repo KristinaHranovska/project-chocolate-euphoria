@@ -17,7 +17,11 @@ const PicturesPart = () => {
           <Container>
             <div className={style.picturesPartContainer}>
               <div className={style.pictureItem}>
-                <picture>
+                <picture
+                  data-aos="zoom-out-right"
+                  data-aos-easing="linear"
+                  data-aos-duration="1000"
+                >
                   <source
                     media="(min-width: 1440px)"
                     srcSet={`${imagesDesktop1x.smallTwo} 1x, ${imagesDesktop2x.smallTwo2x} 2x`}
@@ -33,7 +37,11 @@ const PicturesPart = () => {
                   />
                 </picture>
 
-                <picture>
+                <picture
+                  data-aos="zoom-out-right"
+                  data-aos-easing="linear"
+                  data-aos-duration="1000"
+                >
                   <source
                     media="(min-width: 1440px)"
                     srcSet={`${imagesDesktop1x.smallThree} 1x, ${imagesDesktop2x.smallThree2x} 2x`}
@@ -49,7 +57,12 @@ const PicturesPart = () => {
                   />
                 </picture>
               </div>
-              <div className={style.pictureItemBig}>
+              <div
+                data-aos="zoom-out"
+                data-aos-easing="linear"
+                data-aos-duration="1000"
+                className={style.pictureItemBig}
+              >
                 <picture>
                   <source
                     media="(min-width: 1440px)"
@@ -67,7 +80,11 @@ const PicturesPart = () => {
                 </picture>
               </div>
               <div className={style.pictureItem}>
-                <picture>
+                <picture
+                  data-aos="zoom-out-left"
+                  data-aos-easing="linear"
+                  data-aos-duration="1000"
+                >
                   <source
                     media="(min-width: 1440px)"
                     srcSet={`${imagesDesktop1x.smallOne} 1x, ${imagesDesktop2x.smallOne2x} 2x`}
@@ -83,7 +100,11 @@ const PicturesPart = () => {
                   />
                 </picture>
 
-                <picture>
+                <picture
+                  data-aos="zoom-out-left"
+                  data-aos-easing="linear"
+                  data-aos-duration="1000"
+                >
                   <source
                     media="(min-width: 1440px)"
                     srcSet={`${imagesDesktop1x.smallFour} 1x, ${imagesDesktop2x.smallFour2x} 2x`}

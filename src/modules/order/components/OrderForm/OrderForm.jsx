@@ -42,7 +42,7 @@ const OrderForm = ({ closeModal }) => {
   };
 
   return (
-    <>
+    <div>
       <Formik
         initialValues={orderFormInitialValues}
         validationSchema={contactFormValidationSchema}
@@ -59,7 +59,7 @@ const OrderForm = ({ closeModal }) => {
           />
         </Form>
       </Formik>
-    </>
+    </div>
   );
 };
 

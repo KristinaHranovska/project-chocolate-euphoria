@@ -45,32 +45,34 @@ const FooterSubscribe = () => {
   };
 
   return (
-    <Formik
-      initialValues={initialValuesSubscribe}
-      validate={validate}
-      onSubmit={handleSubmit}
-    >
-      {({ errors, touched, handleBlur }) => (
-        <Form className={style.formSubscribe}>
-          <Field
-            className={`${style.inputSubscribe} ${errors.email && touched.email ? style.invalid : ''}`}
-            type="text"
-            name="email"
-            placeholder="Enter your email address"
-            onBlur={handleBlur}
-          />
-          <TfiEmail className={style.iconEmail} />
-          {errors.email && touched.email && (
-            <div className={style.error}>{errors.email}</div>
-          )}
-          <Button
-            title={'Subscribe'}
-            className={style.btnSubscribe}
-            type="submit"
-          />
-        </Form>
-      )}
-    </Formik>
+    <div data-aos="fade-left" data-aos-easing="linear" data-aos-duration="1000">
+      <Formik
+        initialValues={initialValuesSubscribe}
+        validate={validate}
+        onSubmit={handleSubmit}
+      >
+        {({ errors, touched, handleBlur }) => (
+          <Form className={style.formSubscribe}>
+            <Field
+              className={`${style.inputSubscribe} ${errors.email && touched.email ? style.invalid : ''}`}
+              type="text"
+              name="email"
+              placeholder="Enter your email address"
+              onBlur={handleBlur}
+            />
+            <TfiEmail className={style.iconEmail} />
+            {errors.email && touched.email && (
+              <div className={style.error}>{errors.email}</div>
+            )}
+            <Button
+              title={'Subscribe'}
+              className={style.btnSubscribe}
+              type="submit"
+            />
+          </Form>
+        )}
+      </Formik>
+    </div>
   );
 };
 

@@ -14,6 +14,9 @@ const TasteCards = () => {
       <ul className={style.tasteList}>
         {tasteDescription.map((taste, index) => (
           <li
+            data-aos="flip-right"
+            data-aos-easing="linear"
+            data-aos-duration="1000"
             key={index}
             className={`${style.tasteItem} ${index % 2 === 0 ? style.odd : style.even}`}
           >

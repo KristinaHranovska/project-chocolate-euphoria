@@ -11,7 +11,11 @@ const HowItsMadeCard = () => {
   return (
     <>
       <div className={style.madeContant}>
-        <picture>
+        <picture
+          data-aos="fade-right"
+          data-aos-easing="linear"
+          data-aos-duration="500"
+        >
           <source
             media="(min-width: 1440px)"
             srcSet={`${imagesDesktop1x.chef} 1x, ${imagesDesktop2x.chef2x} 2x`}
@@ -27,7 +31,11 @@ const HowItsMadeCard = () => {
           />
         </picture>
         <div className={style.madeThumb}>
-          <ul>
+          <ul
+            data-aos="zoom-in-left"
+            data-aos-easing="linear"
+            data-aos-duration="500"
+          >
             <li className={style.madeItemElement}>
               <p className={style.madeText}>
                 Heat the milk in a saucepan without bringing it to a boil. Add
@@ -59,12 +67,19 @@ const HowItsMadeCard = () => {
             </li>
           </ul>
           <img
+            data-aos="zoom-in-right"
+            data-aos-easing="linear"
+            data-aos-duration="500"
             className={style.madeLineImg}
             src={imagesDesktop2x.line2x}
             alt="line"
           />
         </div>
-        <picture>
+        <picture
+          data-aos="fade-left"
+          data-aos-easing="linear"
+          data-aos-duration="500"
+        >
           <source
             media="(min-width: 1440px)"
             srcSet={`${imagesDesktop1x.shef} 1x, ${imagesDesktop2x.sheff2x} 2x`}

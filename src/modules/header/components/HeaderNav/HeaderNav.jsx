@@ -41,7 +41,7 @@ const HeaderNav = () => {
   }, []);
 
   return (
-    <>
+    <div data-aos="zoom-in" data-aos-easing="linear" data-aos-duration="500">
       <div className={clsx({ [style.headerContainer]: scroll })}>
         <NavList className={style.navList}>
           <Logo className={style.logo} />
@@ -90,7 +90,7 @@ const HeaderNav = () => {
           </CSSTransition>
         </>
       )}
-    </>
+    </div>
   );
 };
 

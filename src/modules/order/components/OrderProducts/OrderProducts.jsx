@@ -15,6 +15,7 @@ const OrderProducts = ({ closeModal }) => {
   const handleBuyNowClick = () => {
     scrollToElementById('ourProducts');
   };
+
   return (
     <div>
       <button

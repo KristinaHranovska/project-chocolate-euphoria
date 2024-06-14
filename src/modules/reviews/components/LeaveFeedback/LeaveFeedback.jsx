@@ -49,6 +49,9 @@ const LeaveFeedback = () => {
         onClick={feedbackModal.openModal}
         className={style.btnBorderColor}
         title={'Leave a review'}
+        data-aos="zoom-in"
+        data-aos-easing="linear"
+        data-aos-duration="1000"
       />
 
       <ModalWindow
@@ -76,7 +79,12 @@ const LeaveFeedback = () => {
           />
         </picture>
 
-        <div className={style.formReview}>
+        <div
+          data-aos="zoom-in"
+          data-aos-easing="linear"
+          data-aos-duration="400"
+          className={style.formReview}
+        >
           <h2 className={style.reviewTitle}>
             Leave a review about{' '}
             <span className={style.accentMainTitle}>our chocolate</span>

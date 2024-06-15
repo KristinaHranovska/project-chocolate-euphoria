@@ -22,7 +22,7 @@
     gap: 32px;
 
     @include media(desktop) {
-        flex-direction: row;
+        flex-direction: row-reverse;
         justify-content: space-evenly
     }
 }

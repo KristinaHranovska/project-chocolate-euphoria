@@ -131,6 +131,50 @@
     }
 }
 
+.totalBlock {
+    border-top: 1px solid $primary-darkgrey-color;
+    padding-top: 22px;
+
+    @include media(tablet) {
+        padding-top: 24px;
+    }
+}
+
+.calculeteDiscount {
+    text-align: right;
+}
+
+.firstTotal {
+    text-decoration: line-through;
+    margin-bottom: 5px;
+
+    @include font(12, 18);
+    letter-spacing: 0.04em;
+
+    @include media(tablet) {
+        @include font(16, 24);
+    }
+
+    @include media(desktop) {
+        @include font(18, 26);
+    }
+}
+
+.discount {
+    margin-bottom: 10px;
+    @include font(12, 18);
+    letter-spacing: 0.04em;
+
+    @include media(tablet) {
+        @include font(16, 24);
+    }
+
+    @include media(desktop) {
+        @include font(18, 26);
+    }
+
+}
+
 .totalOrder {
     display: flex;
     align-items: center;
@@ -138,14 +182,9 @@
     @include font(16, 24);
     font-weight: 600;
     letter-spacing: 0.04em;
-    border-top: 1px solid $primary-darkgrey-color;
-
-    padding-top: 22px;
-    margin-left: auto;
 
     @include media(tablet) {
         @include font(20, 24);
-        padding-top: 24px;
     }
 
     @include media(desktop) {

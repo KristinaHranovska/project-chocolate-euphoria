@@ -20,6 +20,7 @@ const OrderForm = ({ closeModal }) => {
     (acc, item) => acc + parseFloat(item.product.price) * item.quantity,
     0
   );
+
   const dispatch = useDispatch();
 
   const handleSubmit = async (values, actions) => {

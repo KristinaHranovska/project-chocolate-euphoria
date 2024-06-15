@@ -1,0 +1,65 @@
+.formPromocode {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    margin-bottom: 20px;
+
+    @include media(tablet) {
+        justify-content: end;
+    }
+}
+
+.formInput {
+    @include font(16, 24);
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid $primary-input-color;
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.03);
+    background-color: $primary-white-color;
+    outline: transparent;
+    color: $primary-text-color;
+
+    transition: border-color $animation;
+    padding: 7px 15px;
+
+
+    &::placeholder {
+        color: $primary-placeholder-color;
+    }
+
+    &:focus,
+    &:hover {
+        border: 1px solid $primary-main-color;
+    }
+
+    @include media(tablet) {
+        width: 200px;
+        text-align: center;
+    }
+
+    &.error {
+        border-color: $error-input-color;
+    }
+}
+
+.errorSpan {
+    position: absolute;
+    font-size: 12px;
+    bottom: -15px;
+    right: 170px;
+    color: $error-input-color;
+}
+
+.btnOrangeStyle {
+    background-color: $primary-main-color;
+    border-radius: 100px;
+    transition: background-color $animation, color $animation;
+
+    &:hover,
+    &:active {
+        color: $primary-main-color;
+        background-color: $primary-hover-color;
+    }
+}

@@ -9,6 +9,7 @@
     background-color: $primary-main-color;
     border-radius: 100px;
     transition: background-color $animation, color $animation;
+    margin-bottom: 20px;
 
     &:hover,
     &:active {
@@ -18,7 +19,6 @@
 
     @include media(desktop) {
         @include font(18, 26);
-        margin-bottom: 20px;
         letter-spacing: 0.04em;
         padding: 15px 0;
     }

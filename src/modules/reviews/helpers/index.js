@@ -1,2 +1,2 @@
-export { initialValuesReview, valueNumber } from "./constants";
+export { initialValuesReview } from "./constants";
 export { FeedbackSchema } from "./feedbackShema";

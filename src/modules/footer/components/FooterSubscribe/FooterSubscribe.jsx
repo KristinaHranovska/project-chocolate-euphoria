@@ -40,7 +40,7 @@ const FooterSubscribe = () => {
       toast.success('Successfully subscribed!');
       actions.resetForm();
     } catch (error) {
-      toast.error(error.message);
+      throw new Error(error.response.status);
     }
   };
 

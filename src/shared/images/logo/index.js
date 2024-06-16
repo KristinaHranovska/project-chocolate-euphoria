@@ -1,9 +1,7 @@
-import logoOne from './logoOne.png'
-import logoTwo from './logoTwo.png'
+import logoOne from './logoOne.webp'
 
 const logo = {
-    logoOne,
-    logoTwo
+    logoOne
 }
 
 export default logo;

@@ -121,6 +121,7 @@ const Products = ({ currentCategory }) => {
               <button
                 className={style.prevButton}
                 onClick={() => swiper && swiper.slidePrev()}
+                aria-label="Previous slide"
               >
                 <svg className={style.iconArrow}>
                   <use xlinkHref={`${sprite}#arrow-left`} />
@@ -130,6 +131,7 @@ const Products = ({ currentCategory }) => {
               <button
                 className={style.nextButton}
                 onClick={() => swiper && swiper.slideNext()}
+                aria-label="Next slide"
               >
                 <svg className={style.iconArrow}>
                   <use xlinkHref={`${sprite}#arrow-right`} />

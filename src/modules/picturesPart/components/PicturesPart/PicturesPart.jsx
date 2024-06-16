@@ -34,6 +34,7 @@ const PicturesPart = () => {
                   <img
                     src={imagesDesktop1x.smallTwo}
                     className={`${style.itemImg}`}
+                    alt="picture"
                   />
                 </picture>
 
@@ -54,6 +55,7 @@ const PicturesPart = () => {
                   <img
                     src={imagesDesktop1x.smallThree}
                     className={`${style.itemImg} `}
+                    alt="picture"
                   />
                 </picture>
               </div>
@@ -76,6 +78,7 @@ const PicturesPart = () => {
                   <img
                     src={imagesDesktop1x.big}
                     className={`${style.itemImgBig} `}
+                    alt="picture"
                   />
                 </picture>
               </div>
@@ -97,6 +100,7 @@ const PicturesPart = () => {
                   <img
                     src={imagesDesktop1x.smallOne}
                     className={`${style.itemImg} `}
+                    alt="picture"
                   />
                 </picture>
 
@@ -117,6 +121,7 @@ const PicturesPart = () => {
                   <img
                     src={imagesDesktop1x.smallFour}
                     className={`${style.itemImg} `}
+                    alt="picture"
                   />
                 </picture>
               </div>

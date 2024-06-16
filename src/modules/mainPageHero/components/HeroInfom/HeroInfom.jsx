@@ -16,7 +16,12 @@ const HeroInfom = () => {
   };
 
   return (
-    <div data-aos="zoom-in" className={style.heroInform}>
+    <div
+      data-aos="zoom-in"
+      data-aos-easing="linear"
+      data-aos-duration="500"
+      className={style.heroInform}
+    >
       {isDesktop && <HeroSocial />}
       <h1 className={style.heroMainTitle}>
         Treat yourself or a loved one to our finest ingredients for a moment of

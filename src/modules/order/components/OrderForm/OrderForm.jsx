@@ -14,19 +14,20 @@ import { removeAllProducts } from '@redux/cart/cartSlice';
 import toast from 'react-hot-toast';
 import { postOrder } from 'modules/order/api/orderApi';
 
-const OrderForm = ({ closeModal }) => {
+const OrderForm = ({ closeModal, discount, discountedPrice }) => {
   const products = useSelector((state) => state.cart.products);
-  const totalPrice = products.reduce(
-    (acc, item) => acc + parseFloat(item.product.price) * item.quantity,
-    0
-  );
 
   const dispatch = useDispatch();
 
   const handleSubmit = async (values, actions) => {
     try {
       const order = orderList(products);
-      const message = { userContact: values, order, totalPrice };
+      const message = {
+        userContact: values,
+        order,
+        totalPrice: Number(discountedPrice.toFixed(2)),
+        discount,
+      };
 
       await postOrder(message);
 

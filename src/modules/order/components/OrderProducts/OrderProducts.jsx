@@ -1,30 +1,26 @@
 import { useSelector } from 'react-redux';
 import CustomScrollWrapper from 'shared/components/CustomScrollWrapper/CustomScrollWrapper';
 import { scrollToElementById } from 'helpers/scrollToElementById';
-
 import style from './OrderProducts.module.scss';
 import { icons as sprite } from 'shared/icons';
 import PromocodeForm from '../PromocodeForm/PromocodeForm';
-import { useState } from 'react';
 
-const OrderProducts = ({ closeModal }) => {
+const OrderProducts = ({
+  closeModal,
+  onApplyPromocode,
+  totalPrice,
+  discount,
+}) => {
   const products = useSelector((state) => state.cart.products);
-  const [discount, setDiscount] = useState(null);
-
-  const totalPrice = products.reduce(
-    (acc, item) => acc + parseFloat(item.product.price) * item.quantity,
-    0
-  );
 
   const handleBuyNowClick = () => {
     scrollToElementById('ourProducts');
   };
 
   const handleApplyPromocode = (percent) => {
-    setDiscount(percent);
+    onApplyPromocode(percent);
   };
 
-  const discountedPrice = totalPrice * (1 - discount / 100);
   const discountTotal = (totalPrice * discount) / 100;
 
   return (
@@ -77,14 +73,20 @@ const OrderProducts = ({ closeModal }) => {
         <PromocodeForm onApplyPromocode={handleApplyPromocode} />
 
         <div className={style.totalBlock}>
-          {discount && (
+          {discount !== 0 && (
             <div className={style.calculeteDiscount}>
-              <p className={style.firstTotal}>{totalPrice} UAH</p>
-              <p className={style.discount}>{discountTotal} UAH</p>
+              <p className={style.firstTotal}>{totalPrice.toFixed(2)} UAH</p>
+              <p className={style.discount}>{discountTotal.toFixed(2)} UAH</p>
             </div>
           )}
           <p className={style.totalOrder}>
-            Total Price <span>{discountedPrice.toFixed(2)} UAH</span>
+            Total Price{' '}
+            <span>
+              {discount !== 0
+                ? (totalPrice - discountTotal).toFixed(2)
+                : totalPrice.toFixed(2)}{' '}
+              UAH
+            </span>
           </p>
         </div>
       </div>

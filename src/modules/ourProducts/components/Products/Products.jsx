@@ -105,6 +105,8 @@ const Products = ({ currentCategory }) => {
                     className={style.prodactImg}
                     src={product.photo}
                     alt={product.productName}
+                    width="230"
+                    height="200"
                   />
                   <div className={style.productInform}>
                     <h3 className={style.productName}>{product.productName}</h3>

@@ -28,6 +28,8 @@ const HowItsMadeCard = () => {
             src={imagesDesktop1x.chef}
             alt=""
             className={`${style.imgMadeMain}`}
+            width="500"
+            height="635"
           />
         </picture>
         <div className={style.madeThumb}>
@@ -88,6 +90,8 @@ const HowItsMadeCard = () => {
             src={imagesDesktop1x.shef}
             alt=""
             className={`${style.imgMadeSecond}`}
+            width="500"
+            height="635"
           />
         </picture>
       </div>

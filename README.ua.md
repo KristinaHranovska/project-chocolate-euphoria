@@ -68,5 +68,5 @@
 Реалізована бекенд частина на основі REST API, що забезпечує функціональність
 сайту, включаючи обробку замовлень, роботу з відгуками та підписками.
 
-[GitHub Repository](https://github.com/KristinaHranovska/chocolate-euphoria-backend)
-[Swagger UI](https://chocolate-euphoria-backend.onrender.com/api-docs)
+- [GitHub Repository](https://github.com/KristinaHranovska/chocolate-euphoria-backend)
+- [Swagger UI](https://chocolate-euphoria-backend.onrender.com/api-docs)

@@ -67,5 +67,5 @@ chocolate, and gift boxes.
 Implemented a backend using REST API that supports the functionality of the
 site, including handling orders, managing reviews, and subscriptions.
 
-[GitHub Repository](https://github.com/KristinaHranovska/chocolate-euphoria-backend)
-[Swagger UI](https://chocolate-euphoria-backend.onrender.com/api-docs)
+- [GitHub Repository](https://github.com/KristinaHranovska/chocolate-euphoria-backend)
+- [Swagger UI](https://chocolate-euphoria-backend.onrender.com/api-docs)

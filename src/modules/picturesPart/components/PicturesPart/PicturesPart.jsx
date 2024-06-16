@@ -79,6 +79,8 @@ const PicturesPart = () => {
                     src={imagesDesktop1x.big}
                     className={`${style.itemImgBig} `}
                     alt="picture"
+                    width="310"
+                    height="345"
                   />
                 </picture>
               </div>
